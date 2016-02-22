@@ -6,13 +6,17 @@ import os
 
 # List and open every file in current dir
 tk_files = [file for file in os.listdir(".") if file.endswith(".tk")]
-words = []
+words = {}
 
 for x,y in enumerate(tk_files):
 	with open(y,'r') as f:
 		for line in f:
 			for word in line.split():
-				words.append(word)
+				if word in words.keys():
+					w = words[word]
+					w[1] += 1 
+				else:
+					words[word] = [1,1]
 
 # with open('doc3.tk','r') as f:
 #	 for line in f:
