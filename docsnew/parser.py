@@ -48,10 +48,17 @@ file_list = []
 
 txtFiles = [file for file in os.listdir(".") if file.endswith(".txt")]
 
+#FOR TESTING PURPOSES
+#with open('Yosemite_National_Park.txt', 'r') as f:
+#    for eachLine in f: #strips out the new lines from the file
+#        file_list.append(eachLine.split())
+#print file_list
+
 for x,y in enumerate(txtFiles):
     with open(y, 'r') as f:
         for eachLine in f: #strips out the new lines from the file
-            file_list.append(eachLine.strip())
+            file_list.append(eachLine.split())
+        print file_list
         z =  y[:-4]
         n = open(z + ".pickle",'w')
         pickle.dump(file_list,n)
