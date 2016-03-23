@@ -10,7 +10,8 @@ import llist
 def create_inverted_index():
 	# List and open every file in current dir
 	tk_files = [file for file in os.listdir("tokenization/.") if file.endswith(".pickle")]
-	words = {}
+	inv_index = {}
+	doc_index = {}
 
 	# x = file number 0, 1, ..., n
 	# y = file name
@@ -19,57 +20,74 @@ def create_inverted_index():
 		line_count, word_count = 0, 0
 		# Open file y for writing
 		with open("tokenization/"+y,'rb') as f:
-			
+
 			while True:
 				try:
 					content = pickle.load(f)
 				except EOFError:
 					break
 			
+			doc_index[y] = {}
+			current_term_dict = doc_index[y]
+
 			for word in content:
+
+				if word in current_term_dict.keys():
+					current_term_dict[word] += 1
+				else:
+					current_term_dict[word] = 1
+
 				# We are now parsing word by word
 				# y = filename
 				# x = filenumber - don't trust this number as it will change with new files in the dir
 				# f is the file object
 				# word = current word
 				# Check if word is in the dictionary
-				if word in words.keys():
+				if word in inv_index.keys():
 					# Capture dict entry for existing word
-					w = words[word]
+					w = inv_index[word]
 					w[1] += 1	# increment total frequency
 					# Check Augments/Modifies the linked list appropriately
 					ll = w[2]
 					ll.check(y, word_count)
 					w[0] = ll.length
-				
+
 				# Create Dict entry for new word
 				else:
 					ll = llist.posting_list()
 					ll.add(y, word_count)
-					words[word] = [1,1,ll]
+					inv_index[word] = [1,1,ll]
 				word_count += 1
-	return words
+	return inv_index, doc_index
 
-def print_index(words):
+def print_index(inv_index):
 	# x = key - the word
 	# y = value - the array of [doc_freq, tot_freq, ll]
-	for x,y in words.items():
+	for x,y in inv_index.items():
 		print (x, end="")
 
 		print ("[" + str(y[0]) + ", " + str(y[1]) + ", LL", end="")
 		y[2].print_postings()
 		print ("]")
 
-words = create_inverted_index()
+inv_index, doc_index = create_inverted_index()
 
-pickle.dump(words,open('memory_assets/inverted_index.pickle','wb'))
+pickle.dump(inv_index,open('memory_assets/inverted_index.pickle','wb'))
+pickle.dump(doc_index,open('memory_assets/document_index.pickle','wb'))
 
-# with open("inverted_index.pickle",'rb') as f:
-# 	while True:
-# 		try:
-# 			index = pickle.load(f)
-# 		except EOFError:
-# 			break
+with open("memory_assets/inverted_index.pickle",'rb') as f:
+	while True:
+		try:
+			index = pickle.load(f)
+		except EOFError:
+			break
 
-# print_index(index)
+#print_index(index)
+for x,y in doc_index.items():
+	print ("{ " + str(x) + " { ", end="")
+	for i,j in y.items():
+		print ( str(i) + ":" + str(j) + ", ", end="")
+	print ( " } } " )
+		
+
 
