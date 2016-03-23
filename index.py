@@ -75,19 +75,19 @@ inv_index, doc_index = create_inverted_index()
 pickle.dump(inv_index,open('memory_assets/inverted_index.pickle','wb'))
 pickle.dump(doc_index,open('memory_assets/document_index.pickle','wb'))
 
-with open("memory_assets/inverted_index.pickle",'rb') as f:
-	while True:
-		try:
-			index = pickle.load(f)
-		except EOFError:
-			break
+# with open("memory_assets/inverted_index.pickle",'rb') as f:
+# 	while True:
+# 		try:
+# 			index = pickle.load(f)
+# 		except EOFError:
+# 			break
 
-#print_index(index)
-for x,y in doc_index.items():
-	print ("{ " + str(x) + " { ", end="")
-	for i,j in y.items():
-		print ( str(i) + ":" + str(j) + ", ", end="")
-	print ( " } } " )
+# #print_index(index)
+# for x,y in doc_index.items():
+# 	print ("{ " + str(x) + " { ", end="")
+# 	for i,j in y.items():
+# 		print ( str(i) + ":" + str(j) + ", ", end="")
+# 	print ( " } } " )
 		
 
 
