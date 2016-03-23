@@ -1,4 +1,4 @@
-ECS 767 Information Retrieval Project
+EECS 767 Information Retrieval Project
 ===================
 
 Brought to you by Qiaozhi Wang, Yound Liu, and Gehrig Keane. This is the home of the python implementation for a rudimentary information retrieval system.
