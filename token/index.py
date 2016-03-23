@@ -3,6 +3,7 @@
 #	Description:N/A
 
 import os
+import pickle
 import llist
 import token_rename
 
@@ -50,12 +51,11 @@ def create_inverted_index():
                             line_count += 1
     return words
 
-def print_index():
+def print_index(words):
     # x = key - the word
     # y = value - the array of [doc_freq, tot_freq, ll]
     for x,y in words.items():
             print x,
             print "[" + str(y[0]) + ", " + str(y[1]),
-            y[2].list_print()
+            y[2].print_postings()
             print "]"
-
