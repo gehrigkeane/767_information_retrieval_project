@@ -53,4 +53,8 @@ for filename in filenames:
 			else:
 				w = ps.stem(filtered_text[i])
 			document.append(w)
-	pickle.dump(document,open('tokenization/%s-tokens.pickle'%filename[:-4],'wb'))
+			
+	o_path = "tokenization"
+	if not os.path.exists(o_path): 	
+		os.makedirs(o_path) 
+	pickle.dump(document,open(str(o_path)+'/%s-tokens.pickle'%filename[:-4],'wb'))
