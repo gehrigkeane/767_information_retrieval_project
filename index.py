@@ -5,7 +5,6 @@
 import os
 import pickle
 import llist
-import token_rename
 
 def create_inverted_index():
     # List and open every file in current dir
