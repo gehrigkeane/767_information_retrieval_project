@@ -1,0 +1,1245 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="apple-itunes-app" content="app-id=342792525, app-argument=imdb:///title/tt0049406?src=mdot">
+        
+    
+            <script type="text/javascript">var ue_t0=window.ue_t0||+new Date();</script>
+            <script type="text/javascript">
+                var ue_mid = "A1EVAM02EL8SFB"; 
+                var ue_sn = "www.imdb.com";  
+                var ue_furl = "fls-na.amazon.com";
+                var ue_sid = "000-0000000-0000000";
+                var ue_id = "19GQW1BDS7MMCXBRD3KX";
+                (function(e){var c=e;var a=c.ue||{};a.main_scope="mainscopecsm";a.q=[];a.t0=c.ue_t0||+new Date();a.d=g;function g(h){return +new Date()-(h?0:a.t0)}function d(h){return function(){a.q.push({n:h,a:arguments,t:a.d()})}}function b(m,l,h,j,i){var k={m:m,f:l,l:h,c:""+j,err:i,fromOnError:1,args:arguments};c.ueLogError(k);return false}b.skipTrace=1;e.onerror=b;function f(){c.uex("ld")}if(e.addEventListener){e.addEventListener("load",f,false)}else{if(e.attachEvent){e.attachEvent("onload",f)}}a.tag=d("tag");a.log=d("log");a.reset=d("rst");c.ue_csm=c;c.ue=a;c.ueLogError=d("err");c.ues=d("ues");c.uet=d("uet");c.uex=d("uex");c.uet("ue")})(window);(function(e,d){var a=e.ue||{};function c(g){if(!g){return}var f=d.head||d.getElementsByTagName("head")[0]||d.documentElement,h=d.createElement("script");h.async="async";h.src=g;f.insertBefore(h,f.firstChild)}function b(){var k=e.ue_cdn||"z-ecx.images-amazon.com",g=e.ue_cdns||"images-na.ssl-images-amazon.com",j="/images/G/01/csminstrumentation/",h=e.ue_file||"ue-full-051542d0cfa6f645f8266601739de597._V1_.js",f,i;if(h.indexOf("NSTRUMENTATION_FIL")>=0){return}if("ue_https" in e){f=e.ue_https}else{f=e.location&&e.location.protocol=="https:"?1:0}i=f?"https://":"http://";i+=f?g:k;i+=j;i+=h;c(i)}if(!e.ue_inline){if(a.loadUEFull){a.loadUEFull()}else{b()}}a.uels=c;e.ue=a})(window,document);
+                if (!('CS' in window)) { window.CS = {}; }
+                    window.CS.loginSecureHost = "https://secure.imdb.com";
+            </script>
+ 
+
+        
+        <script type="text/javascript">var IMDbTimer={starttime: new Date().getTime(),pt:'java'};</script>
+        
+  <script>(function(t){ (t.events = t.events || {})["csm_head_pre_title"] = new Date().getTime(); })(IMDbTimer);</script>
+        <title>The Killing (1956) - Plot Summary - IMDb</title>
+  <script>(function(t){ (t.events = t.events || {})["csm_head_post_title"] = new Date().getTime(); })(IMDbTimer);</script>
+        
+            <link rel="canonical" href="http://www.imdb.com/title/tt0049406/plotsummary" />
+            <meta property="og:url" content="http://www.imdb.com/title/tt0049406/plotsummary" />
+        
+  <script>(function(t){ (t.events = t.events || {})["csm_head_pre_icon"] = new Date().getTime(); })(IMDbTimer);</script>
+        <link href="http://ia.media-imdb.com/images/G/01/imdb/images/safari-favicon-517611381._CB303901978_.svg" mask rel="icon" sizes="any">
+        <link rel="icon" type="image/ico" href="http://ia.media-imdb.com/images/G/01/imdb/images/favicon-2165806970._CB379387995_.ico" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="shortcut icon" type="image/x-icon" href="http://ia.media-imdb.com/images/G/01/imdb/images/desktop-favicon-2165806970._CB379390718_.ico" />
+        <link href="http://ia.media-imdb.com/images/G/01/imdb/images/mobile/apple-touch-icon-web-4151659188._CB361295786_.png" rel="apple-touch-icon"> 
+        <link href="http://ia.media-imdb.com/images/G/01/imdb/images/mobile/apple-touch-icon-web-76x76-53536248._CB361295462_.png" rel="apple-touch-icon" sizes="76x76"> 
+        <link href="http://ia.media-imdb.com/images/G/01/imdb/images/mobile/apple-touch-icon-web-120x120-2442878471._CB361295428_.png" rel="apple-touch-icon" sizes="120x120"> 
+        <link href="http://ia.media-imdb.com/images/G/01/imdb/images/mobile/apple-touch-icon-web-152x152-1475823641._CB361295368_.png" rel="apple-touch-icon" sizes="152x152">            
+        <link rel="search" type="application/opensearchdescription+xml" href="http://ia.media-imdb.com/images/G/01/imdb/images/imdbsearch-3349468880._CB379388505_.xml" title="IMDb" />
+  <script>(function(t){ (t.events = t.events || {})["csm_head_post_icon"] = new Date().getTime(); })(IMDbTimer);</script>
+        
+        <meta property="pageId" content="tt0049406" />
+        <meta property="pageType" content="title" />
+        <meta property="subpageType" content="plotsummary" />
+
+
+        <link rel='image_src' href="http://ia.media-imdb.com/images/M/MV5BMTg1NjEwOTI0Nl5BMl5BanBnXkFtZTcwODQ2MjM2NQ@@._V1._CR8,22,317,462_UY1200_CR96,0,630,1200_AL_.jpg">
+        <meta property='og:image' content="http://ia.media-imdb.com/images/M/MV5BMTg1NjEwOTI0Nl5BMl5BanBnXkFtZTcwODQ2MjM2NQ@@._V1._CR8,22,317,462_UY1200_CR96,0,630,1200_AL_.jpg" />
+
+        <meta property='og:type' content="video.movie" />
+    <meta property='fb:app_id' content='115109575169727' />
+
+    <meta property='og:title' content="The Killing (1956)" />
+    <meta property='og:site_name' content='IMDb' />
+    <meta name="title" content="The Killing (1956) - Plot Summary - IMDb" />
+        <meta name="description" content="The Killing (1956) on IMDb: After getting out of prison, Johnny Clay masterminds a complex race-track heist, but his scheme is complicated by the intervention of the wife of a te" />
+        <meta property="og:description" content="The Killing (1956) on IMDb: After getting out of prison, Johnny Clay masterminds a complex race-track heist, but his scheme is complicated by the intervention of the wife of a te" />
+        <meta name="keywords" content="Reviews, Showtimes, DVDs, Photos, Message Boards, User Ratings, Synopsis, Trailers, Credits" />
+        <meta name="request_id" content="19GQW1BDS7MMCXBRD3KX" />
+        
+  <script>(function(t){ (t.events = t.events || {})["csm_head_pre_css"] = new Date().getTime(); })(IMDbTimer);</script>
+<!-- h=ics-1d-c3-2xl-i-c44cc772.us-east-1 -->
+
+            <link rel="stylesheet" type="text/css" href="http://ia.media-imdb.com/images/G/01/imdb/css/collections/title-flat-585991835._CB295309192_.css" />
+            <!--[if IE]><link rel="stylesheet" type="text/css" href="http://ia.media-imdb.com/images/G/01/imdb/css/collections/ie-1170868033._CB318510270_.css" /><![endif]-->
+            <link rel="stylesheet" type="text/css" href="http://ia.media-imdb.com/images/G/01/imdb/css/site/consumer-navbar-mega-3796876714._CB298540748_.css" />
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="http://ia.media-imdb.com/images/G/01/imdb/css/wheel/nojs-2827156349._CB318528195_.css">
+        </noscript>
+  <script>(function(t){ (t.events = t.events || {})["csm_head_post_css"] = new Date().getTime(); })(IMDbTimer);</script>
+        
+  <script>(function(t){ (t.events = t.events || {})["csm_head_pre_ads"] = new Date().getTime(); })(IMDbTimer);</script>
+        
+        <script  type="text/javascript">
+            // ensures js doesn't die if ads service fails.  
+            // Note that we need to define the js here, since ad js is being rendered inline after this.
+            (function(f) {
+                // Fallback javascript, when the ad Service call fails.  
+                
+                if((window.csm == null || window.generic == null || window.consoleLog == null)) {
+                    if (window.console && console.log) {
+                        console.log("one or more of window.csm, window.generic or window.consoleLog has been stubbed...");
+                    }
+                }
+                
+                window.csm = window.csm || { measure:f, record:f, duration:f, listen:f, metrics:{} };
+                window.generic = window.generic || { monitoring: { start_timing: f, stop_timing: f } };
+                window.consoleLog = window.consoleLog || f;
+            })(function() {});
+        </script>
+  <script>
+    if ('csm' in window) {
+      csm.measure('csm_head_delivery_finished');
+    }
+  </script>
+        </head>
+    <body id="styleguide-v2" class="fixed">
+<script>
+    if (typeof uet == 'function') {
+      uet("bb");
+    }
+</script>
+  <script>
+    if ('csm' in window) {
+      csm.measure('csm_body_delivery_started');
+    }
+  </script>
+        <div id="wrapper">
+            <div id="root" class="redesign">
+<script>
+    if (typeof uet == 'function') {
+      uet("ns");
+    }
+</script>
+<div id="nb20" class="navbarSprite">
+<div id="supertab">	
+	<!-- no content received for slot: top_ad -->
+	
+</div>
+  <div id="navbar" class="navbarSprite">
+<noscript>
+  <link rel="stylesheet" type="text/css" href="http://ia.media-imdb.com/images/G/01/imdb/css/site/consumer-navbar-no-js-3652782989._CB318528046_.css" />
+</noscript>
+<!--[if IE]><link rel="stylesheet" type="text/css" href="http://ia.media-imdb.com/images/G/01/imdb/css/site/consumer-navbar-ie-2133976414._CB318528041_.css"><![endif]-->
+<span id="home_img_holder">
+<a href="/?ref_=nv_home"
+title="Home" class="navbarSprite" id="home_img" ></a>  <span class="alt_logo">
+    <a href="/?ref_=nv_home"
+title="Home" >IMDb</a>
+  </span>
+</span>
+<form
+ method="get"
+ action="/find"
+ class="nav-searchbar-inner"
+ id="navbar-form"
+
+>
+  <div id="nb_search">
+    <noscript><div id="more_if_no_javascript"><a href="/search/">More</a></div></noscript>
+    <button id="navbar-submit-button" class="primary btn" type="submit"><div class="magnifyingglass navbarSprite"></div></button>
+    <input type="hidden" name="ref_" value="nv_sr_fn" />
+    <input type="text" autocomplete="off" value="" name="q" id="navbar-query" placeholder="Find Movies, TV shows, Celebrities and more...">
+    <div class="quicksearch_dropdown_wrapper">
+      <select name="s" id="quicksearch" class="quicksearch_dropdown navbarSprite"
+              onchange="jumpMenu(this); suggestionsearch_dropdown_choice(this);">
+        <option value="all" >All</option>
+        <option value="tt" >Titles</option>
+        <option value="ep" >TV Episodes</option>
+        <option value="nm" >Names</option>
+        <option value="co" >Companies</option>
+        <option value="kw" >Keywords</option>
+        <option value="ch" >Characters</option>
+        <option value="qu" >Quotes</option>
+        <option value="bi" >Bios</option>
+        <option value="pl" >Plots</option>
+      </select>
+    </div>
+    <div id="navbar-suggestionsearch"></div>
+  </div>
+</form>
+<div id="megaMenu">
+    <ul id="consumer_main_nav" class="main_nav">
+        <li class="spacer"></li>
+        <li class="css_nav_item" id="navTitleMenu">
+            <p class="navCategory">
+                <a href="/movies-in-theaters/?ref_=nv_tp_inth_1"
+>Movies</a>,
+                <a href="/chart/toptv/?ref_=nv_tp_tv250_2"
+>TV</a><br />
+                & <a href="/showtimes/?ref_=nv_tp_sh_3"
+>Showtimes</a></p>
+            <span class="downArrow"></span>
+            <div id="navMenu1" class="sub_nav">
+                <div id="titleAd"></div>
+                <div class="subNavListContainer">
+                    <h5>MOVIES</h5>
+                    <ul>
+                        <li><a href="/movies-in-theaters/?ref_=nv_mv_inth_1"
+>In Theaters</a></li>
+                        <li><a href="/showtimes/?ref_=nv_mv_sh_2"
+>Showtimes & Tickets</a></li>
+                        <li><a href="/trailers/?ref_=nv_mv_tr_3"
+>Latest Trailers</a></li>
+                        <li><a href="/movies-coming-soon/?ref_=nv_mv_cs_4"
+>Coming Soon</a></li>
+                        <li><a href="/calendar/?ref_=nv_mv_cal_5"
+>Release Calendar</a></li>
+                        <li><a href="/chart/top?ref_=nv_mv_250_6"
+>Top Rated Movies</a></li>
+                        <li><a href="/chart/moviemeter?ref_=nv_mv_mpm_7"
+>Most Popular Movies</a></li>
+                    </ul>
+                    <h5>CHARTS & TRENDS</h5>
+                    <ul>
+                        <li><a href="/chart/?ref_=nv_ch_cht_1"
+>Box Office</a></li>
+                        <li><a href="/search/title?count=100&groups=oscar_best_picture_winners&sort=year,desc&ref_=nv_ch_osc_2"
+>Oscar Winners</a></li>
+                        <li><a href="/genre/?ref_=nv_ch_gr_3"
+>Most Popular by Genre</a></li>
+                    </ul>
+                </div>
+                <div class="subNavListContainer">
+                    <h5>TV & VIDEO</h5>
+                    <ul>
+                        <li><a href="/imdbpicks/tv-releases/?ref_=nv_tvv_picks_1"
+>TV Picks</a></li>
+                        <li><a href="/tvgrid/?ref_=nv_tvv_ls_2"
+>On Tonight</a></li>
+                        <li><a href="/chart/toptv/?ref_=nv_tvv_250_3"
+>Top Rated TV Shows</a></li>
+                        <li><a href="/chart/tvmeter?ref_=nv_tvv_mptv_4"
+>Most Popular TV Shows</a></li>
+                        <li><a href="/feature/watch-now-on-amazon/?ref_=nv_tvv_wn_5"
+>Watch Now on Amazon</a></li>
+                        <li><a href="/sections/dvd/?ref_=nv_tvv_dvd_6"
+>DVD & Blu-Ray</a></li>
+                    </ul>
+                    <h5>SPECIAL FEATURES</h5>
+                    <ul>
+                        <li><a href="/x-ray/?ref_=nv_sf_xray_2"
+>X-Ray for Movies & TV</a></li>
+                        <li><a href="/imdbpicks/?ref_=nv_sf_picks_3"
+>IMDb Picks</a></li>
+                        <li><a href="/best-of/?ref_=nv_sf_bstof_4"
+>Best of 2015</a></li>
+                        <li><a href="/youtube-originals/?ref_=nv_sf_yto_5"
+>YouTube Originals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="spacer"></li>
+        <li class="css_nav_item" id="navNameMenu">
+            <p class="navCategory">
+                <a href="/search/name?gender=male,female&ref_=nv_tp_cel_1"
+>Celebs</a>,
+                <a href="/awards-central/?ref_=nv_tp_awrd_2"
+>Events</a><br />
+                & <a href="/gallery/rg784964352?ref_=nv_tp_ph_3"
+>Photos</a></p>
+            <span class="downArrow"></span>
+            <div id="navMenu2" class="sub_nav">
+                <div id="nameAd"></div>
+                <div class="subNavListContainer">
+                    <h5>CELEBS</h5>
+                    <ul>
+                            <li><a href="/search/name?birth_monthday=04-06&refine=birth_monthday&ref_=nv_cel_brn_1"
+>Born Today</a></li>
+                        <li><a href="/news/celebrity?ref_=nv_cel_nw_2"
+>Celebrity News</a></li>
+                        <li><a href="/search/name?gender=male,female&ref_=nv_cel_m_3"
+>Most Popular Celebs</a></li>
+                    </ul>
+                    <h5>PHOTOS</h5>
+                    <ul>
+                        <li><a href="/gallery/rg784964352?ref_=nv_ph_ls_1"
+>Latest Stills</a></li>
+                        <li><a href="/gallery/rg1528338944?ref_=nv_ph_lp_2"
+>Latest Posters</a></li>
+                        <li><a href="/gallery/rg2465176320?ref_=nv_ph_lv_3"
+>Photos We Love</a></li>
+                    </ul>
+                </div>
+                <div class="subNavListContainer">
+                    <h5>EVENTS</h5>
+                    <ul>
+                        <li><a href="/awards-central/?ref_=nv_ev_awrd_1"
+>Awards Central</a></li>
+                        <li><a href="/sundance/?ref_=nv_ev_sun_3"
+>Sundance</a></li>
+                        <li><a href="/cannes/?ref_=nv_ev_can_6"
+>Cannes</a></li>
+                        <li><a href="/comic-con/?ref_=nv_ev_comic_7"
+>Comic-Con</a></li>
+                        <li><a href="/emmys/?ref_=nv_ev_rte_8"
+>Emmy Awards</a></li>
+                        <li><a href="/venice/?ref_=nv_ev_venice_9"
+>Venice Film Festival</a></li>
+                        <li><a href="/toronto/?ref_=nv_ev_tff_10"
+>Toronto Film Festival</a></li>
+                        <li><a href="/event/all/?ref_=nv_ev_all_11"
+>All Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="spacer"></li>
+        <li class="css_nav_item" id="navNewsMenu">
+            <p class="navCategory">
+                <a href="/news/top?ref_=nv_tp_nw_1"
+>News</a> &<br />
+                <a href="/boards/?ref_=nv_tp_bd_2"
+>Community</a></p>
+            <span class="downArrow"></span>
+            <div id="navMenu3" class="sub_nav">
+                <div id="latestHeadlines">
+                    <div class="subNavListContainer">
+                        <h5>LATEST HEADLINES</h5>
+    <ul>
+                <li itemprop="headline">
+<a href="/news/ni59694408/?ref_=nv_nw_tn_1"
+> Merle Haggard Dead ... on 79th Birthday
+</a><br />
+                        <span class="time">1 hours ago</span>
+                </li>
+                <li itemprop="headline">
+<a href="/news/ni59693423/?ref_=nv_nw_tn_2"
+> Benedict Cumberbatch’s ‘Sherlock’ to Be Directed by Woman for First Time
+</a><br />
+                        <span class="time">7 hours ago</span>
+                </li>
+                <li itemprop="headline">
+<a href="/news/ni59692549/?ref_=nv_nw_tn_3"
+> Barbara Turner, ‘Georgia’ Screenwriter and Mother of Jennifer Jason Leigh, Dies
+</a><br />
+                        <span class="time">20 hours ago</span>
+                </li>
+    </ul>
+                    </div>
+                </div>
+                <div class="subNavListContainer">
+                    <h5>NEWS</h5>
+                    <ul>
+                        <li><a href="/news/top?ref_=nv_nw_tp_1"
+>Top News</a></li>
+                        <li><a href="/news/movie?ref_=nv_nw_mv_2"
+>Movie News</a></li>
+                        <li><a href="/news/tv?ref_=nv_nw_tv_3"
+>TV News</a></li>
+                        <li><a href="/news/celebrity?ref_=nv_nw_cel_4"
+>Celebrity News</a></li>
+                        <li><a href="/news/indie?ref_=nv_nw_ind_5"
+>Indie News</a></li>
+                    </ul>
+                    <h5>COMMUNITY</h5>
+                    <ul>
+                        <li><a href="/boards/?ref_=nv_cm_bd_1"
+>Message Boards</a></li>
+                        <li><a href="/czone/?ref_=nv_cm_cz_2"
+>Contributor Zone</a></li>
+                        <li><a href="/poll/?ref_=nv_cm_pl_3"
+>Polls</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="spacer"></li>
+        <li class="css_nav_item" id="navWatchlistMenu">
+<p class="navCategory singleLine watchlist">
+    <a href="/list/watchlist?ref_=nv_wl_all_0"
+>Watchlist</a>
+</p>
+<span class="downArrow"></span>
+<div id="navMenu4" class="sub_nav">
+    <h5>
+            YOUR WATCHLIST
+    </h5>
+    <ul id="navWatchlist">
+    </ul>
+    <script>
+    if (!('imdb' in window)) { window.imdb = {}; }
+    window.imdb.watchlistTeaserData = [
+                {
+                        href : "/list/watchlist",
+                src : "http://ia.media-imdb.com/images/G/01/imdb/images/navbar/watchlist_slot1_logged_out-1670046337._CB306318084_.jpg"
+                },
+                {
+                    href : "/search/title?count=100&title_type=feature,tv_series",
+                src : "http://ia.media-imdb.com/images/G/01/imdb/images/navbar/watchlist_slot2_popular-4090757197._CB306318127_.jpg"
+                },
+                {
+                    href : "/chart/top",
+                src : "http://ia.media-imdb.com/images/G/01/imdb/images/navbar/watchlist_slot3_top250-575799966._CB306318332_.jpg"
+                }
+    ];
+    </script>
+</div>
+        </li>
+        <li class="spacer"></li>
+    </ul>
+<script>
+if (!('imdb' in window)) { window.imdb = {}; }
+window.imdb.navbarAdSlots = {
+    titleAd : {
+    },
+    nameAd : {
+    }
+}
+</script>
+</div>
+<div id="nb_extra">
+    <ul id="nb_extra_nav" class="main_nav">
+        <li class="css_nav_item" id="navProMenu">
+            <p class="navCategory">
+<a href="http://pro.imdb.com/signup/index.html?rf=cons_nb_hm&ref_=cons_nb_hm"
+> <img alt="IMDbPro Menu" src="http://ia.media-imdb.com/images/G/01/imdb/images/navbar/imdbpro_logo_nb-720143162._CB306318304_.png" />
+</a>            </p>
+            <span class="downArrow"></span>
+            <div id="navMenuPro" class="sub_nav">
+<a href="http://pro.imdb.com/signup/index.html?rf=cons_nb_hm&ref_=cons_nb_hm"
+id="proLink" > <div id="proAd">
+<script>
+if (!('imdb' in window)) { window.imdb = {}; }
+window.imdb.proMenuTeaser = {
+imageUrl : "http://ia.media-imdb.com/images/G/01/imdb/images/navbar/imdbpro_menu_user-2082544740._CB306318138_.jpg"
+};
+</script>
+</div>
+<div class="subNavListContainer">
+<img alt="Go to IMDbPro" title="Go to IMDbPro" src="http://ia.media-imdb.com/images/G/01/imdb/images/navbar/imdbpro_logo_menu-2185879182._CB306318245_.png" />
+<h5>GET INFORMED</h5>
+<p>Industry information at your fingertips</p>
+<h5>GET CONNECTED</h5>
+<p>Over 200,000 Hollywood insiders</p>
+<h5>GET DISCOVERED</h5>
+<p>Enhance your IMDb Page</p>
+<p><strong>Go to IMDbPro &raquo;</strong></p>
+</div>
+</a>            </div>
+        </li>
+        <li class="spacer"><span class="ghost">|</span></li>
+        <li>
+            <a href="/help/?ref_=nb_hlp"
+>Help</a>
+        </li>
+        <li class="social">
+
+    <a href="/offsite/?page-action=fol_fb&token=BCYkWkW7XBehkrRlKUc9FTcYBX7CPVnwNKdRAiqXO-yY0j4kJR4nr73pvnWbLtKywef7H-Zlmdm0%0D%0Ar5a9J13_owPGN7mWuqaoS460BNytp0SMcbVZsk4Lzdb0LB7kc6y88gnOlEAbJzsKE7bL4X2bcjsC%0D%0A5xNaLVhsu8gv2AanF8iUF32ILWxBjQ3kANQoEwkP9yRDhbFupeoNi-PxwRWaL9KPuQ%0D%0A&ref_=nv_fol_fb"
+title="Follow IMDb on Facebook" target="_blank" itemprop='url'> <span class="desktop-sprite follow-facebook" ></span>
+</a>
+    <a href="/offsite/?page-action=fol_tw&token=BCYtQmLdOZI_U7qhbhudHSU-CZbVRumBwIU7V2QtsXAOPdGEt2R7UDcHLab0xb4rq3Ga5_aT3NbY%0D%0Ark2OG4-souKuBr-oPrmXEdoJoMntiwG01XAdc7rWJOxatp0SE69NHPvZfpZ6jGsL5BUtJ4fA6YYa%0D%0A1C03r96g6yAWERgPO9MgBy4FiL04vg6r-_3tKPWKLc5m%0D%0A&ref_=nv_fol_tw"
+title="Follow IMDb on Twitter" target="_blank" itemprop='url'> <span class="desktop-sprite follow-twitter" ></span>
+</a>
+    <a href="/offsite/?page-action=fol_inst&token=BCYuP_GE9GEVm6dxBp7Vz-OG3wvmEfvTVKPlk2O8c8ORUbmdufc-MdpMBtaroZ1eN41rwP1sLaLn%0D%0Ahs2B9Vig9Su7RngVJXZrj99y0TllDAYB0G-vA9wYFXxhBLyOa1GsGUEc-Pqt0Wk0jacu75UKdIJw%0D%0AEhEUuCt6dn11zXjooK2NQ5Br4oSRBBQ4rfE009alN4AI%0D%0A&ref_=nv_fol_inst"
+title="Follow IMDb on Instagram" target="_blank" itemprop='url'> <span class="desktop-sprite follow-instagram" ></span>
+</a>
+        </li>
+    </ul>
+</div>
+<div id="nb_personal">
+    <ul id="consumer_user_nav" class="main_nav">
+
+        <li class="css_nav_menu" id="navUserMenu">
+            <p class="navCategory singleLine">
+                <a href="/register/login?ref_=nv_usr_lgin_1"
+rel="login" id="nblogin" >Login</a>
+            </p>
+            <span class="downArrow"></span>
+            <div class="sub_nav">
+                <div class="subNavListContainer">
+                    <br />
+                    <ul>
+                        <li>
+                            <a href="https://secure.imdb.com/register-imdb/form-v2?ref_=nv_usr_reg_2"
+>Register</a>
+                        </li>
+                        <li>
+                            <a href="/register/login?ref_=nv_usr_lgin_3"
+rel="login" id="nblogin" >Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+  </div>
+</div>
+	
+	<!-- no content received for slot: navstrip -->
+	
+	
+	<!-- no content received for slot: injected_navstrip -->
+	
+<script>
+    if (typeof uet == 'function') {
+      uet("ne");
+    }
+</script>
+
+                    <div id="pagecontent" class="pagecontent" itemscope itemtype="http://schema.org/Movie">
+	
+	<!-- no content received for slot: injected_billboard -->
+	
+
+<div id="content-2-wide" class="redesign">
+<div id="main">
+  <div class="article listo">
+    <span class=rightcornerlink >
+            <a href="/register/login?why=edit&ref_=ttpl_pl_edt"
+rel="login">Edit</a>
+    </span>
+<div class="subpage_title_block">
+<a href="/title/tt0049406/?ref_=ttpl_pl_tt"
+> <img itemprop="image"
+class="poster"
+height="98"
+width="67"
+alt="The Killing (1956) - Plot Summary Poster"
+src="http://ia.media-imdb.com/images/M/MV5BMTg1NjEwOTI0Nl5BMl5BanBnXkFtZTcwODQ2MjM2NQ@@._V1._CR8,22,317,462_UY98_CR0,0,67,98_AL_.jpg" />
+</a>  <div class="parent">   
+    <h3 itemprop="name">
+<a href="/title/tt0049406/?ref_=ttpl_pl_tt"
+itemprop='url'>The Killing</a>         <span class="nobr">
+             (1956)
+         </span>
+    </h3>
+  </div>
+  <script>
+    if ('csm' in window) {
+      csm.measure('csm_body_delivery_started');
+    }
+  </script>
+  <h1 class="header">Plot Summary</h1>
+</div>
+    <div class="header">
+  <ul class="zebraList">
+<div class="header"><div class="nav"><div class="desc">Showing all 4 plot summaries</div></div></div>
+          <li class="odd">
+              <p class="plotSummary">
+After getting out of prison, Johnny Clay masterminds a complex race-track heist, but his scheme is complicated by the intervention of the wife of a teller (George Peatty) in on the scheme, the boyfriend of the wife, airport regulations, and a small dog.              </p>
+                  <span class="nobr">- <em>Written by
+<a href="/search/title?plot_author=Andrew%20Hyatt%20%3Cdres%40uiuc.edu%3E&view=simple&sort=alpha&ref_=ttpl_pl_1"
+>Andrew Hyatt &lt;dres@uiuc.edu&gt;</a></span></em>          </li>
+          <li class="even">
+              <p class="plotSummary">
+Johnny Clay has a plan. After spending 5 years in Alcatraz, he decides that if he's going to commit crimes, the risk had better be worth the punishment. He then proceeds to mastermind a brilliant criminal scheme to steal $2,000,000 from a local racetrack in which "no one will get hurt." The only flaw in his plan is that he does not consider one of his co-horts' greedy, shrewish wife and her ruthless boyfriend. That's when something goes wrong...              </p>
+                  <span class="nobr">- <em>Written by
+<a href="/search/title?plot_author=Marc-David%20Jacobs%20%3CAgentMarcFBI%40hotmail.com%3E&view=simple&sort=alpha&ref_=ttpl_pl_2"
+>Marc-David Jacobs &lt;AgentMarcFBI@hotmail.com&gt;</a></span></em>          </li>
+          <li class="odd">
+              <p class="plotSummary">
+Ex-convict Johnny Clay tells his girl friend, Fay, he has plans for making money, and indeed he has. He rounds up a gang and brings them in on a seemingly fool-proof scheme to rob a race track of $200,000. The first thread unravels when Sherry Peatty, wife of gang-member George Peatty, tells her boyfriend Val Cannon about the plan, and he cuts himself in on that action also. The robbery is completed and the gang goes to the hideout where Johnny will join them later. Val sticks up the robbers, a shot is fired, and all hands are soon dispatched. Johnny, with the money in a suitcase, joins Fay at the airport. And the fat lady still hasn't sung.              </p>
+                  <span class="nobr">- <em>Written by
+<a href="/search/title?plot_author=Les%20Adams%20%3Clonghorn1939%40suddenlink.net%3E&view=simple&sort=alpha&ref_=ttpl_pl_3"
+>Les Adams &lt;longhorn1939@suddenlink.net&gt;</a></span></em>          </li>
+      <li class="even">
+        <p class="plotSummary">
+Crooks plan and execute a daring race-track robbery.        </p>
+          <span class="nobr">- <em>Written by
+<a href="/search/title?plot_author=alfiehitchie&view=simple&sort=alpha&ref_=ttpl_pl_4"
+>alfiehitchie</a></span></em>      </li>
+  </ul>
+  <h4 class="dataHeaderWithBorder">Synopsis</h4>
+  <div class="odd" id="plotSynopsis">
+    <p>
+Johnny Clay (Sterling Hayden), an ex-convict, organizes a $2 million racecourse hold-up. His accomplices are race track cashier George Peatty (Elisha Cook...    </p>
+        <span class="nobr"><a href="synopsis?ref_=ttpl_pl_syn"
+>See full synopsis</a></span>&nbsp;&raquo;
+        <span class="spoilerWarning">(Warning: contains spoilers!)</span>
+  </div>
+    </div>
+  </div> 
+
+
+
+    <div class="article" id="see_also">
+        <h2>See also</h2>
+        <p>
+                            <span class="nobr">
+<a href="/title/tt0049406/taglines?ref_=ttpl_sa_1"
+class="link" >Taglines</a>
+<span class="ghost">|</span></span>                            <span class="nobr">
+<a href="/title/tt0049406/synopsis?ref_=ttpl_sa_2"
+class="link" >Synopsis</a>
+<span class="ghost">|</span></span>                            <span class="nobr">
+<a href="/title/tt0049406/keywords?ref_=ttpl_sa_3"
+class="link" >Plot Keywords</a>
+<span class="ghost">|</span></span>                            <span class="nobr">
+<a href="/title/tt0049406/parentalguide?ref_=ttpl_sa_4"
+class="link" >Parents Guide</a>
+</span>        </p>
+    </div>
+    
+  <script>
+    if ('csm' in window) {
+      csm.measure('csm_TitleContributeWidget_started');
+    }
+  </script>
+    <div class="article contribute">
+        <div class="rightcornerlink">
+<a href="/help/?adding/&ref_=ttpl_cn_hlp"
+>Getting Started</a>
+            <span>|</span>
+<a href="/czone/?ref_=ttpl_cn_cz"
+>Contributor Zone</a>&nbsp;&raquo;</div>
+        <h2>Contribute to This Page</h2>
+
+                <div class="button-box">
+                    <form method="post" action="/updates?ref_=ttpl_cn_edt">
+                        <input type="hidden" name="auto" value="legacy/title/tt0049406/plotsummary">
+                            <button class="btn primary large" rel="login" type="submit">Edit page</button>
+                    </form>
+                </div>
+        
+
+    
+
+    
+    
+    </div>
+
+  <script>
+    if ('csm' in window) {
+      csm.measure('csm_TitleContributeWidget_finished');
+    }
+  </script>
+    
+</div> 
+
+
+<div id="sidebar">
+	
+	<!-- no content received for slot: top_rhs -->
+	
+            
+    
+    
+    <div class="aux-content-widget-2 links subnav" div="quicklinks">
+
+<a href="/title/tt0049406/?ref_=ttpl_ql"
+class="subnav_heading" >The Killing</a>                <hr/>
+
+
+        <h4>Storyline</h4>
+    <ul class="quicklinks">
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/taglines?ref_=ttpl_ql_1"
+class="link" >Taglines</a>
+                </li>
+                <li class="subnav_item_main subnav_selected">
+<a href="/title/tt0049406/plotsummary?ref_=ttpl_ql_2"
+class="link" >Plot Summary</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/synopsis?ref_=ttpl_ql_3"
+class="link" >Synopsis</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/keywords?ref_=ttpl_ql_4"
+class="link" >Plot Keywords</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/parentalguide?ref_=ttpl_ql_5"
+class="link" >Parents Guide</a>
+                </li>
+    </ul>
+        <hr/>
+
+        <div id="full_subnav">
+
+
+        <h4>Details</h4>
+    <ul class="quicklinks">
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/fullcredits?ref_=ttpl_ql_dt_1"
+class="link" >Full Cast and Crew</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/releaseinfo?ref_=ttpl_ql_dt_2"
+class="link" >Release Dates</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/officialsites?ref_=ttpl_ql_dt_3"
+class="link" >Official Sites</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/business?ref_=ttpl_ql_dt_4"
+class="link ghost" >Box Office/Business</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/companycredits?ref_=ttpl_ql_dt_5"
+class="link" >Company Credits</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/locations?ref_=ttpl_ql_dt_6"
+class="link" >Filming Locations</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/technical?ref_=ttpl_ql_dt_7"
+class="link" >Technical Specs</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/literature?ref_=ttpl_ql_dt_8"
+class="link ghost" >Literature</a>
+                </li>
+    </ul>
+
+
+
+        <h4>Did You Know?</h4>
+    <ul class="quicklinks">
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/trivia?ref_=ttpl_ql_trv_1"
+class="link" >Trivia</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/goofs?ref_=ttpl_ql_trv_2"
+class="link" >Goofs</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/crazycredits?ref_=ttpl_ql_trv_3"
+class="link ghost" >Crazy Credits</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/quotes?ref_=ttpl_ql_trv_4"
+class="link" >Quotes</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/alternateversions?ref_=ttpl_ql_trv_5"
+class="link ghost" >Alternate Versions</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/movieconnections?ref_=ttpl_ql_trv_6"
+class="link" >Connections</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/soundtrack?ref_=ttpl_ql_trv_7"
+class="link ghost" >Soundtracks</a>
+                </li>
+    </ul>
+
+
+        <h4>Photo & Video</h4>
+    <ul class="quicklinks">
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/mediaindex?ref_=ttpl_ql_pv_1"
+class="link" >Photo Gallery</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/videogallery?ref_=ttpl_ql_pv_2"
+class="link" >Trailers and Videos</a>
+                </li>
+    </ul>
+
+
+        <h4>Opinion</h4>
+    <ul class="quicklinks">
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/awards?ref_=ttpl_ql_op_1"
+class="link" >Awards</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/faq?ref_=ttpl_ql_op_2"
+class="link" >FAQ</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/reviews?ref_=ttpl_ql_op_3"
+class="link" >User Reviews</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/ratings?ref_=ttpl_ql_op_4"
+class="link" >User Ratings</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/externalreviews?ref_=ttpl_ql_op_5"
+class="link" >External Reviews</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/criticreviews?ref_=ttpl_ql_op_6"
+class="link ghost" >Metacritic Reviews</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/board/?ref_=ttpl_ql_op_7"
+class="link" >Message Board</a>
+                </li>
+    </ul>
+
+
+        <h4>TV</h4>
+    <ul class="quicklinks">
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/tvschedule?ref_=ttpl_ql_tv_1"
+class="link ghost" >TV Schedule</a>
+                </li>
+    </ul>
+
+
+        <h4>Related Items</h4>
+    <ul class="quicklinks">
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/news?ref_=ttpl_ql_rel_1"
+class="link" >NewsDesk</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/showtimes/title/tt0049406?ref_=ttpl_ql_rel_2"
+class="link ghost" >Showtimes</a>
+                </li>
+                <li class="subnav_item_main">
+<a href="/title/tt0049406/externalsites?ref_=ttpl_ql_rel_3"
+class="link" >External Sites</a>
+                </li>
+    </ul>
+            <hr/>
+        </div>
+
+        <div class="show_more"><span class="titlePageSprite arrows show"></span>Explore More</div>
+        <div class="show_less"><span class="titlePageSprite arrows hide"></span>Show Less</div>
+    </div>
+  <div class="aux-content-widget-2" id="social-share-widget"> 
+    
+    <div class="social">
+      <div class="social_networking"> 
+       <span><strong>Share</strong> this page:</span>
+  <a onclick="window.open(&quot;http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0049406%2F&quot;, 'newWindow', 'width=626, height=436'); return false;" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0049406%2F" target="_blank" title="Share on Facebook" class="share_icon facebook"></a>
+  <a onclick="window.open(&quot;http://twitter.com/intent/tweet?text=The%20Killing%20(1956)%20-%20Plot%20Summary%20-%20http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0049406%2F&quot;, 'newWindow', 'width=815, height=436'); return false;" href="http://twitter.com/intent/tweet?text=The%20Killing%20(1956)%20-%20Plot%20Summary%20-%20http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0049406%2F" target="_blank" title="Share on Twitter" class="share_icon twitter"></a>
+  <a onclick="$('div.social input[name=share-link]').show().select(); return false;" title="Share the page" class="share_icon share_url_link" href="http://www.imdb.com/title/tt0049406/"></a>
+      </div>
+      <input type="text" name="share-link" value="http://www.imdb.com/title/tt0049406/" readonly>
+    </div>
+  <script type="text/javascript">if (uet) { uet('bb', 'facebook_like_iframe', {wb: 1}); }</script>
+  <div class="social_networking_like">
+    <iframe
+      id="iframe_like"
+      name="fbLikeIFrame_0"
+      class="social-iframe"
+      scrolling="no"
+      frameborder="0"
+      allowTransparency="allowTransparency"
+      ref="http://www.imdb.com/title/tt0049406/"
+      width=280
+      height=65></iframe>
+  </div>
+  </div>
+<script>
+    if (typeof uet == 'function') {
+      uet("bb", "RelatedListsWidget", {wb: 1});
+    }
+</script>
+        <div class="aux-content-widget-2">
+            <div id="relatedListsWidget">
+                <div class="rightcornerlink">
+                    <a href="/list/create?ref_=ttpl_rls"
+>Create a list</a>&nbsp;&raquo;
+                </div>
+                <h3>User Lists</h3>
+                <p>Related lists from IMDb users</p>
+
+    <div class="list-preview even">
+        <div class="list-preview-item-narrow">
+<a href="/list/ls009045921?ref_=rls_1"
+><img height="86" width="86" alt="list image" title="list image"src="/images/nopicture/medium/film.png"class="loadlate hidden " loadlate="http://ia.media-imdb.com/images/M/MV5BNDAxNzI5NDI0N15BMl5BanBnXkFtZTcwNTc2Njk3OA@@._V1_UX86_CR0,0,86,86_AL_.jpg" /></a>        </div>
+        <div class="list_name">
+            <strong><a href="/list/ls009045921?ref_=rls_1"
+>
+Personal Favorites: The 50s
+</a></strong>
+        </div>
+        <div class="list_meta">
+            a list of 25 titles
+            <br />created 03&nbsp;Jun&nbsp;2012
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+    <div class="list-preview odd">
+        <div class="list-preview-item-narrow">
+<a href="/list/ls071317592?ref_=rls_2"
+><img height="86" width="86" alt="list image" title="list image"src="/images/nopicture/medium/film.png"class="loadlate hidden " loadlate="http://ia.media-imdb.com/images/M/MV5BMTQ2Mjc1MDQwMl5BMl5BanBnXkFtZTcwNzUyOTUyMg@@._V1_UX86_CR0,0,86,86_AL_.jpg" /></a>        </div>
+        <div class="list_name">
+            <strong><a href="/list/ls071317592?ref_=rls_2"
+>
+Must Watch - Classics
+</a></strong>
+        </div>
+        <div class="list_meta">
+            a list of 36 titles
+            <br />created 29&nbsp;Oct&nbsp;2014
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+    <div class="list-preview even">
+        <div class="list-preview-item-narrow">
+<a href="/list/ls076369050?ref_=rls_3"
+><img height="86" width="86" alt="list image" title="list image"src="/images/nopicture/medium/film.png"class="loadlate hidden " loadlate="http://ia.media-imdb.com/images/M/MV5BMTQ1NTQ4MDk0Ml5BMl5BanBnXkFtZTYwNzcwOTQ5._V1._CR1,37,323,436_UX86_CR0,0,86,86_AL_.jpg" /></a>        </div>
+        <div class="list_name">
+            <strong><a href="/list/ls076369050?ref_=rls_3"
+>
+Best Crime Films of the 50s
+</a></strong>
+        </div>
+        <div class="list_meta">
+            a list of 25 titles
+            <br />created 09&nbsp;Mar&nbsp;2015
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+    <div class="list-preview odd">
+        <div class="list-preview-item-narrow">
+<a href="/list/ls072009534?ref_=rls_4"
+><img height="86" width="86" alt="list image" title="list image"src="/images/nopicture/medium/film.png"class="loadlate hidden " loadlate="http://ia.media-imdb.com/images/M/MV5BMTQ1NTQ4MDk0Ml5BMl5BanBnXkFtZTYwNzcwOTQ5._V1._CR1,37,323,436_UX86_CR0,0,86,86_AL_.jpg" /></a>        </div>
+        <div class="list_name">
+            <strong><a href="/list/ls072009534?ref_=rls_4"
+>
+My Favourite films of the 50s
+</a></strong>
+        </div>
+        <div class="list_meta">
+            a list of 25 titles
+            <br />created 11&nbsp;months&nbsp;ago
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+    <div class="list-preview even">
+        <div class="list-preview-item-narrow">
+<a href="/list/ls032878292?ref_=rls_5"
+><img height="86" width="86" alt="list image" title="list image"src="/images/nopicture/medium/film.png"class="loadlate hidden " loadlate="http://ia.media-imdb.com/images/M/MV5BMTUzODUyNjkxM15BMl5BanBnXkFtZTcwODA5MTM1Mg@@._V1_UX86_CR0,0,86,86_AL_.jpg" /></a>        </div>
+        <div class="list_name">
+            <strong><a href="/list/ls032878292?ref_=rls_5"
+>
+Best of 1950's
+</a></strong>
+        </div>
+        <div class="list_meta">
+            a list of 38 titles
+            <br />created 1&nbsp;week&nbsp;ago
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+                <div class="see-more">
+                    <a href="/lists/tt0049406?ref_=rls_sm"
+>See all related lists</a>&nbsp;&raquo;
+                </div>
+            </div>
+        </div>
+<script>
+    if (typeof uet == 'function') {
+      uet("be", "RelatedListsWidget", {wb: 1});
+    }
+</script>
+<script>
+    if (typeof uex == 'function') {
+      uex("ld", "RelatedListsWidget", {wb: 1});
+    }
+</script>
+	
+	<!-- no content received for slot: bottom_rhs -->
+	
+</div> 
+
+</div> 
+
+<div id="content-1" class="redesign clear">
+</div>
+
+                   <br class="clear" />
+                </div>
+
+
+
+
+
+
+    <div id="footer" class="ft">
+
+            <div id="rvi-div">
+                <div class="recently-viewed">&nbsp;</div>
+                <br class="clear">
+            </div>
+
+	
+	<!-- no content received for slot: bottom_ad -->
+	
+
+        <div class="container footer-grid-wrapper">
+            <div class="row footer-row">
+                <div class="col outside">
+    <h3>IMDb Everywhere</h3>
+    <div class="app-links">
+    <a href="/offsite/?page-action=ft_app_apple&token=BCYr0kthpZakZUo2pefHyLyE7DoN18pHNhhihTx27gWGVyI9z7BsLfkg0eolJ-L3IC2CHMAOBYoL%0D%0AvudvcrRp6EgvBrv83IuE_255MyO1j2pLWEnV_TbLflJyd6IdOeu7Vf4T2QGev5w1g2GoBmbXlgd-%0D%0AZwXFVPoJ_wBBPARGG75bhQBPl2HyRpRZDWXcTi9KR4Mz1pk8Pl4kb8G45y1xgGaq4EEhiX3-cm6L%0D%0A1y5m_1S_W1M%0D%0A&ref_=ft_app_apple"
+title="Get the IMDb App on the Apple App Store" target="_blank" itemprop='url'> <span class="desktop-sprite appstore-apple" ></span>
+</a>
+    <a href="/offsite/?page-action=ft_app_google&token=BCYhB0BGpIjUSO2gMQrjsR191PunWPW2QdoSnoh9NhNDRjtF73PcQ3W5AUecWjjAWkVI-04NitQP%0D%0Aog2mvRLrJlaK9W8hSGXEfpaBvdtKPg54RM5CGOsWpbFvAnFPb3YsZNg26ghz24vckFbgeGlqc3xV%0D%0A8pPBHhu7KDBvQUaoP6oKUoYRRrV3rBhtR-rh3nTM3B-dNcWmx668-EFDcm_a9Pi4-YD76rwdAXIh%0D%0A7TYxb-Oq35U%0D%0A&ref_=ft_app_google"
+title="Get the IMDb app on Google Play" target="_blank" itemprop='url'> <span class="desktop-sprite appstore-google" ></span>
+</a>
+    <a href="/offsite/?page-action=ft_app_amazon&token=BCYlVK9Kln2DrWoEVOnnjJjetbreYhImP9vL4nSeAUWcWoEn1WZgQbNdZA70czSOrnmB586BY6BG%0D%0Anb0HSpmNAD-qJI87E1yTvlCDHSrYeKqqL_mw49TPEKbHU_olghf7q0W9DFuXC6vFHVrpt3rwiQxf%0D%0AHDYs0BVPQ3gytepIKNbYpBif5uMluoRS6phOAxATGvR8DGPArodYla7mgSq2zy8lKhrdnKIkMAJN%0D%0ApIduigbZSeAsvP4oA3_GOIEbUs8Z687Hv2ADDqweBcnCQOSFzgUrAn-8B1oVCieVreYP3yQW-XMR%0D%0A9UbWqzTjo8LByB17wYCELCNFV1nHWbEK3t_KlFCxypSitz63PN21Hu_R4pNJ7gib_FW1nSePmCPb%0D%0ALdTS4jFOgZFdKyStlptn45J9zMFQdmpoB0mOBYal4l6YOXYaD7k%0D%0A&ref_=ft_app_amazon"
+title="Get the IMDb app on Amazon Appstore for Android" target="_blank" itemprop='url'> <span class="desktop-sprite appstore-amazon" ></span>
+</a>
+    </div>
+
+    <p>Find showtimes, watch trailers, browse photos, track your Watchlist and rate your favorite movies and TV shows on your phone or tablet!</p>
+
+    <a href="http://m.imdb.com?ref_=ft_mdot"
+class="touchlink" >IMDb Mobile site</a>
+                </div>
+                <div class="col center">
+  <div class="link-bar icon-link-bar">
+    <h3>
+      Follow IMDb on
+      <div>
+
+    <a href="/offsite/?page-action=fol_fb&token=BCYkacEX2P1x1oryH7YnefnmDMy7ZGLwRkCmRCSrPt9OwsldCfbB8vu0bc_QxFomZ-rFKpoazj9T%0D%0AUuDIdoFH4UVKLzK8nnSqg6gs0eRZfQA27u7q6KS4up-isOGiLtT7XdjkgR8uC34VNsLI6LB4LX_s%0D%0A7WC0jE9etlQ_ndI5EypOiLnYdO04gEecwH_JUcvreIYjtt9PrZxBjUvKXQ4_Zb-TiA%0D%0A&ref_=ft_fol_fb"
+title="Follow IMDb on Facebook" target="_blank" itemprop='url'> <span class="desktop-sprite follow-facebook" ></span>
+</a>
+    <a href="/offsite/?page-action=fol_tw&token=BCYiFANcjZIAlF3finjrlHoNkEz_NuKmzryD7wDScwXTm0k7ICy4H2dtYBno2ByR9NZITleyTy6b%0D%0Aj5GCaqgEk14hAuknVJz3mG3JD53CvxIk5Tqswn7wmtNO9Sbr4J4R1JSuZyuVC7XOuqJkaHlZMWZS%0D%0AXICnjEeKJ46Or7lKWL8DyFr0QVC1CVqxnx19eeQ5c-GU%0D%0A&ref_=ft_fol_tw"
+title="Follow IMDb on Twitter" target="_blank" itemprop='url'> <span class="desktop-sprite follow-twitter" ></span>
+</a>
+    <a href="/offsite/?page-action=fol_inst&token=BCYmD8HAnHV_GeTqEne9U-9txyzSz9sfQelCx8iq9b1eYsGarJUdT1_bUOZt0tc0CoIlnhaF-lRX%0D%0AW1a41pQxYAhAZx_BKtr9Gq7QPGSyMuA8gt5IhPLob2wUMEkXBsfVl4Utx-R0ic0IYIDa9Gj7LfZd%0D%0ArEbkdmluo3UBA-f4nMhhgemLx-eTZ35NIvUPlrmcVYXo%0D%0A&ref_=ft_fol_inst"
+title="Follow IMDb on Instagram" target="_blank" itemprop='url'> <span class="desktop-sprite follow-instagram" ></span>
+</a>
+      </div>
+    </h3>
+  </div>
+                </div>
+                <div class="col outside">
+    <div class="row">
+        <div class="col col-4">
+            <ul class="unstyled">
+                <li><a href="/?ref_=ft_hm"
+>Home</a></li>
+                <li><a href="/chart/top?ref_=ft_250"
+>Top Rated Movies</a></li>
+                <li><a href="/chart/?ref_=ft_cht"
+>Box Office</a></li>
+                <li><a href="/sections/tv/?ref_=ft_tv"
+>TV</a></li>
+                <li><a href="/movies-coming-soon/?ref_=ft_cs"
+>Coming Soon</a></li>
+                <li><a href="/a2z?ref_=ft_si"
+>Site Index</a></li>
+                <li><a href="/search?ref_=ft_sr"
+>Search</a></li>
+                <li><a href="/movies-in-theaters/?ref_=ft_inth"
+>In Theaters</a></li>
+            </ul>
+        </div>
+        <div class="col col-4">
+            <ul class="unstyled">
+                <li><a href="/helpdesk/contact?ref_=ft_con"
+>Contact Us</a></li>
+                <li><a href="/boards/?ref_=ft_mb"
+>Message Boards</a></li>
+                <li>        <a href="https://secure.imdb.com/register-imdb/form-v2?ref_=ft_reg"
+>Register</a>
+</li>
+                <li><a href="/news/?ref_=ft_nw"
+>News</a></li>
+                <li class="spacer"></li>
+                <li><a href="/pressroom/?ref_=ft_pr"
+>Press Room</a></li>
+                <li><a href="/advertising/?ref_=ft_ad"
+>Advertising</a></li>
+                <li><a href="/jobs?ref_=ft_jb"
+>Jobs</a></li>
+            </ul>
+        </div>
+        <div class="col col-4">
+            <ul class="unstyled">
+                <li><a href="http://pro.imdb.com/signup/index.html?rf=cons_ft_hm&ref_=cons_ft_hm"
+>IMDbPro</a></li>
+                <li>    <a href="/offsite/?page-action=ft-mojo&token=BCYvHsaMAtKbzniU7ZiGGPwmhHTw5VHkh7AsaEqfB9bcCt_nxlwc_5iQJcxOd3L0fkpjUQRqsvha%0D%0AyOI55xZ0h5iAo52U306ZmisBNsO9cP3zheI7F8cWYBNLPWR3cF3NkDb52nZ4dFkT69F2pNyQUGaE%0D%0AUZr8fxFb0aUVOK-tOPdXzJt_vvw6KJ-fQOSbh0xeXhtB%0D%0A&ref_=ft_bom"
+itemprop='url'>Box Office Mojo</a>
+</li>
+                <li>    <a href="/offsite/?page-action=ft-wab&token=BCYkoKhfe5rTd5YaNXOK0gTyrNpr1F_SPgYZZKW7Nyc6YowE9OzAFXhstdN_iEPes-lYogF-DEBg%0D%0APC3yXcSYO-eqyy_xONVUO4OwWvneGye0z7Qi0xgQtSdwMY8fcgNcY5QjjWJXrmi3jInNKsmkssg6%0D%0AFNZT8-Wg0uSI-Sb0vUj-h-eKAIxiXy-9pXSGLUGZtzmG%0D%0A&ref_=ft_wab"
+itemprop='url'>Withoutabox</a>
+</li>
+                <li class="spacer"></li>
+                <li><a href="/help/show_article?conditions&ref_=ft_cou"
+>Conditions of Use</a></li>
+                <li><a href="/privacy?ref_=ft_pvc"
+>Privacy Policy</a></li>
+                <li>    <a href="/offsite/?page-action=ft-iba&token=BCYvnuEeAQ2IhwKgwjuFG8Q0vFgzBl9ySRivLw8qUB8qTAyApCpncu1LLiTBj867hW4b2v0SnoQy%0D%0ASR1gZKYJDMt9x1VOCXuDhUXnCgE0GOCP662va8pKXqFJpLNb3uOj0nzXdnJEhREFKP-ix4xy01PE%0D%0AMJPRPG02CuShVS3nDgo_IBa3nTRaYywECx1I8l57LrvX8-MdY8QFygERG-LII00KVTrNdwLuO6wH%0D%0A7EqteC0qy0S0bwIlxhybaB0vO-2QD3Q4%0D%0A&ref_=ft_iba"
+itemprop='url'>Interest-Based Ads</a>
+</li>
+                <li class="spacer"></li>
+            </ul>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="ft-copy float-right">
+                <a
+href="/help/show_article?conditions"
+>Copyright &copy;</a> 1990-2016
+                <a
+href="/help/"
+>IMDb.com, Inc.</a>
+            </div>
+            <div>
+                An <span id="amazon_logo" class="footer_logo" align="middle">Amazon.com</span> company.
+            </div>
+        </div>
+
+
+
+    <table class="footer" id="amazon-affiliates">
+        <tr>
+            <td colspan="8">
+                Amazon Affiliates
+            </td>
+        </tr>
+        <tr>
+
+    <td>
+        <div>
+            <a href="/offsite/?page-action=ft-aiv&token=BCYp0RcoOZv6vaAtaOYXbhcI6aZ_30N7lIyA-U0e4CxvXsq8YYKogGEdDKIeaHkrwawC7cgkXfGk%0D%0AWKPRZQ4ZVPYAGnQ_yrGc5MHBahEfOHaZ4F37Mw6nSBfIsGRpKNXis12apCgCebWGh1VyvfehxSFA%0D%0A3hB3YVog-67g2xXbJeIrn9ibvfr6kE-e_PJZipqPKp61gWDJp700J77W1zJNDzWCc1GSvvlM8anw%0D%0AYQMVW1vOyTo%0D%0A" class="amazon-affiliate-site-link">
+                <span class="amazon-affiliate-site-name">Amazon Video</span><br>
+                <span class="amazon-affiliate-site-desc">Watch Movies &<br>TV Online</span>
+            </a>
+        </div>
+    </td>
+
+    <td>
+        <div>
+            <a href="/offsite/?page-action=ft-piv&token=BCYlvIhFqX2fMtRX7VVdvhI3OvkkqebnOuuT0HEEg-E2OhfEPT4-Q3rlgURfx2OZ3HXxs6j137Dz%0D%0ANVpARLKQHyNajKPRw03IrLlJU1i3YeayX8vV81EVtC3lrEPyZRHpftmW-AgS9Scvpv9WRtXxZRcP%0D%0AZoo3sPdyA52i5mhl0C0Gs5kPEhRpymvYME48tX96epyC0NKN5ov6VCvckimmjyrMFQRnd1YC7pgg%0D%0AjNbdfF2X86A%0D%0A" class="amazon-affiliate-site-link">
+                <span class="amazon-affiliate-site-name">Prime Video</span><br>
+                <span class="amazon-affiliate-site-desc">Unlimited Streaming<br>of Movies & TV</span>
+            </a>
+        </div>
+    </td>
+
+    <td>
+        <div>
+            <a href="/offsite/?page-action=ft-amzn-de&token=BCYqbkSxZuZJAeo7Yj2N_EkjL5CHvYSTaztvVd7SrUx17WMvyyhlQDUbNxXIKMTdXbyWEcJq_3Gz%0D%0A60ewT4p-PgRJuO8WfjvaNqjpUS9fEfd7oz7CfFfQXw4sAin6SSleWVNIllxQxZ8CE5jEbbZThjWh%0D%0AsA43jEb3FCsaH6SxxFbalB3mcE4Mp7OIYKMagVJ0ci6Ce4-VHnhxzr_vpnaMLYbWTDvfCrcN2boE%0D%0A_3I4GtI5xaQ%0D%0A" class="amazon-affiliate-site-link">
+                <span class="amazon-affiliate-site-name">Amazon Germany</span><br>
+                <span class="amazon-affiliate-site-desc">Buy Movies on<br>DVD & Blu-ray</span>
+            </a>
+        </div>
+    </td>
+
+    <td>
+        <div>
+            <a href="/offsite/?page-action=ft-amzn-it&token=BCYo7t3pwsoq5rmjw4PVUN1_foJhY0m4ZgLBqyQ30Umu3hPECugedNWLcO7h38y0A3uRy_VRbTqB%0D%0ALBBhmevmcwofhQ2a-k2sBjiiAyYgWhkaQ0hN4oVy6CKyDw3NgC48ZuNJD5_K_ek2GLNga0_9amHU%0D%0A8gh40XAgjtXXX_XdRf9qEVvW4mjB1za3RBb3YFtOsYmKNfl1i6CkfI3TCDsS1jr50oibtXFrvInR%0D%0AODrifJmnlMA%0D%0A" class="amazon-affiliate-site-link">
+                <span class="amazon-affiliate-site-name">Amazon Italy</span><br>
+                <span class="amazon-affiliate-site-desc">Buy Movies on<br>DVD & Blu-ray</span>
+            </a>
+        </div>
+    </td>
+
+    <td>
+        <div>
+            <a href="/offsite/?page-action=ft-amzn-fr&token=BCYtUPrigx0jt0I2k7qdDJjRpZLevLJDVvnRkydhW6rPRgQ81qvuo6aTHSSjPhMW-ruM9JOC0Imh%0D%0AyW88h0ZaaAP7yEhpCvBAUjnKFVOiKLLSIkVnUtYD2u01A5jam19Rit1LL0dBWPaQl-UYCvlbltGN%0D%0Auv5qZucl25XB9kuKYJ8JjG-ayNUJWOWTj_UyakeCSq1ybRzIHAXJOCsUc-3pIgtHuTDqKe6EQRla%0D%0A0kBbgByYnf0%0D%0A" class="amazon-affiliate-site-link">
+                <span class="amazon-affiliate-site-name">Amazon France</span><br>
+                <span class="amazon-affiliate-site-desc">Buy Movies on<br>DVD & Blu-ray</span>
+            </a>
+        </div>
+    </td>
+
+    <td>
+        <div>
+            <a href="/offsite/?page-action=ft-amzn-in&token=BCYov9_DSwRSLWdBFn0pWolT_bN4M2s_iLkzUqCN5m1AXLceG4XPs4N7n2wGIRhUwhOP3pRi3kma%0D%0AncCPqytwHJ8D0wToEYTERMz1y1itvYM0KWj7g-GievT3CGxn285Kyw7c8MxngE40FP0lITqHSloO%0D%0Arpg7y7d28JLN3_UQ3cllk3vnKMHvjQnalH06aeHieM7412dzuMAhL6av0oYg_DcFizAIPMod-0mt%0D%0AFj2KDwAwLkzrhoz5QR-feCENgoWctIZl%0D%0A" class="amazon-affiliate-site-link">
+                <span class="amazon-affiliate-site-name">Amazon India</span><br>
+                <span class="amazon-affiliate-site-desc">Buy Movie and<br>TV Show DVDs</span>
+            </a>
+        </div>
+    </td>
+
+    <td>
+        <div>
+            <a href="/offsite/?page-action=ft-amzn-dpr&token=BCYonSorACGsd3RJnHhyKdgCzlG_nQuDHcTbnRM_-PhTJVCaXUGi6Q78a5Qghs-hW8_86-cD7WMl%0D%0AwCvShVn3IEMVQy_-l3OMY-nKSX5YxgDUfNovuH1zbWnRTitx4TOudTcbnGqVSdWY7l0LkTAxpidq%0D%0AhfJ5N1rBe10DJS0QcvG07P8%0D%0A" class="amazon-affiliate-site-link">
+                <span class="amazon-affiliate-site-name">DPReview</span><br>
+                <span class="amazon-affiliate-site-desc">Digital<br>Photography</span>
+            </a>
+        </div>
+    </td>
+
+    <td>
+        <div>
+            <a href="/offsite/?page-action=ft-amzn-aud&token=BCYvcN8sVPwqxOJG_HL9fzz30CAGcN_xHkcJ8IIpzX8dvCRabTCDdtHC7lbzfrz8R6gYpo0tqgvr%0D%0A9W88vx2x9GXepFlRRN-jJCIkwmgQZYLUJMOef1fbNOr0wuN42u_2IrDSgT85-Dxjn4aqXNl3Hq9v%0D%0AhDZNm1jSuyo_DkrmZW0T_Qk%0D%0A" class="amazon-affiliate-site-link">
+                <span class="amazon-affiliate-site-name">Audible</span><br>
+                <span class="amazon-affiliate-site-desc">Download<br>Audio Books</span>
+            </a>
+        </div>
+    </td>
+        </tr>
+    </table>
+      </div>
+            </div>
+        </div>
+
+<script type="text/javascript" src="http://ia.media-imdb.com/images/G/01/imdb/js/collections/common-2997851314._CB293837866_.js"></script>
+<script type="text/javascript" src="http://ia.media-imdb.com/images/G/01/imdb/js/collections/title-3025639264._CB293625505_.js"></script>
+
+<script type="text/javascript" id="login">
+(function(){
+    var readyTimeout = setInterval(function() {
+        if (window.jQuery && window.imdb && window.imdb.login_lightbox) {
+            clearTimeout(readyTimeout);
+            window.imdb.login_lightbox("https://secure.imdb.com", "http://www.imdb.com/title/tt0049406/plotsummary?ref_=tt_ql_stry_2");
+        }
+    }, 100);
+})();
+</script>
+
+        <script type="text/javascript">
+        function jQueryOnReady(remaining_count) {
+            if (window.jQuery) {
+                jQuery(
+                             function() {
+           var isAdvertisingThemed = !!(window.custom && window.custom.full_page && window.custom.full_page.theme),
+               url = "http://www.facebook.com/widgets/like.php?width=280&show_faces=1&layout=standard&href=http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0049406%2F&colorscheme=light",
+               like = document.getElementById('iframe_like');
+
+           if (!isAdvertisingThemed && like) {
+              like.src = url;
+              like.onload = function () { 
+                  if (uex) { uex('ld', 'facebook_like_iframe', {wb: 1}); }
+              };
+           } else if (isAdvertisingThemed) {
+              $('.social_networking_like').closest('.aux-content-widget-2').hide();
+           }
+        }
+
+                );
+            } else if (remaining_count > 0) {
+                setTimeout(function() { jQueryOnReady(remaining_count-1) }, 100);
+            }
+        }
+        jQueryOnReady(50);
+        </script>
+
+
+<div id="servertime" time="21"/>
+
+
+
+<script>
+    if (typeof uet == 'function') {
+      uet("be");
+    }
+</script>
+
+    </body>
+</html>
