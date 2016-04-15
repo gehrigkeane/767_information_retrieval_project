@@ -26,7 +26,7 @@ def get_wordnet_pos(treebank_tag):		#seperate to different kind of word
 #f = open(str('filenames[i].pickle'),'rb')
 #text = pickle.load(f)
 #----------------------txt version-----------------------#
-filenames = os.listdir("tour")
+filenames = os.listdir("Parsed_Plotsummary")
 	#get all the filenames of 63 documents under folder Documents
 total_text = []
 for filename in filenames:
@@ -34,7 +34,7 @@ for filename in filenames:
 	if not ".txt" in filename:
 		continue
 	#print('Filename: %s'%filename)	
-	f = open('tour/%s'%filename,'rb')
+	f = open('Parsed_Plotsummary/%s'%filename,'rb')
 	text = f.read().decode("utf-8")
 	sents = sent_tokenize(text)
 	for sent in sents:
@@ -53,4 +53,7 @@ for filename in filenames:
 			else:
 				w = ps.stem(filtered_text[i])
 			document.append(w)
-	pickle.dump(document,open('tokenization/%s-tokens.pickle'%filename[:-4],'wb'))
+	o_path = "newtokenization"
+	if not os.path.exists(o_path):
+			os.makedirs(o_path)
+	pickle.dump(document,open(o_path+'/%s-tokens.pickle'%filename[:-5],'wb'))
