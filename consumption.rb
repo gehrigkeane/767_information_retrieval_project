@@ -25,29 +25,39 @@ module Consumption
 		CSV.foreach("memory_assets/ii.csv") do |row|
 			term,df,tf,pl = row
 			#next if term != "stag"
-			inverted_index[:term] = [df.to_i, tf.to_i, []]
+			inverted_index[term.intern] = [df.to_i, tf.to_i, []]
 			pl.split('`').each do |str|
 				posting = str.split ';'
 				posting[1] = posting[1].delete('[]').split(':') if posting[1]
 				posting[1] = posting[1].map(&:to_i) if posting[1]
 				posting[2] = posting[2].to_i
 
-				inverted_index[:term][2].push(posting)
+				inverted_index[term.intern][2].push(posting)
 			end
 
 			# Debugging Term printing
 			#puts "#{term}: "
 			#pp inverted_index[:term]
-			inverted_index
 		end
+
+		# Return the inverted index
+		inverted_index
 	end
 
 	#--------------------------------------------------------------------------------
-	#	 Load the Document Index into an array of array's
+	#	 Load the Term IDF's into a hash
 	#
 	#--------------------------------------------------------------------------------
-	def load_di
-		nil
+	def self.load_idf
+		idf = {}
+
+		CSV.foreach("memory_assets/total_idf.csv") do |row|
+			term,value = row
+			idf[term.intern] = value.to_f
+		end
+
+		# Return the idf hash
+		idf
 	end
 
 	#--------------------------------------------------------------------------------
@@ -55,6 +65,16 @@ module Consumption
 	#
 	#--------------------------------------------------------------------------------
 	def load_dv
-		nil
+		dl = []
+
+		CSV.foreach("memory_assets/document_list.csv") do |row|
+			num,name = row
+			dl.push(name)
+		end
+
+		CSV.foreach("memory_assets/document_vectors.csv") do |row|
+			name,vector = row
+			#incomplete logic
+		end
 	end
 end
