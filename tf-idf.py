@@ -13,8 +13,9 @@ document_list = {}
 D_vectors = []
 
 #----------------------open inverted index--------------------#
-filenames = os.listdir("tokenization")
+filenames = os.listdir("Plotsummary")
 N = len(filenames)			# total number of files
+#print("N: ", N)
 
 path = 'memory_assets/inverted_index.pickle'
 f = open(str(path),'rb')
@@ -70,7 +71,7 @@ with open(str(o_path)+"/document_vectors.csv",'a',newline='',encoding='utf8') as
 	writer2 = csv.writer(f_docvec)
 	for pD in D_vectors:
 		writer2.writerow(pD)
-	#pickle.dump(D_vectors,open(str(o_path)+"/document_vectors.pickle",'wb'))
+#pickle.dump(D_vectors,open(str(o_path)+"/document_vectors.pickle",'wb'))
 #pp.pprint("D_vectors")
 #pp.pprint(D_vectors)
 def similarity(D1,D2):
