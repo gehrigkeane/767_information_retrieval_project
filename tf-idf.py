@@ -27,7 +27,7 @@ while True:
 #print(inverted_index)
 for key, value in inverted_index.items():
 	total_idf.update({key:math.log(N/value[0],10)})
-#print("total_idf")
+#print("total_idf: ")
 #print(total_idf)
 
 o_path = "new_processed"
@@ -48,7 +48,7 @@ while True:
 	except EOFError:
 		break
 #print("document_index:")
-#pp.pprint(document_index)
+#print(document_index)
 i = 0
 for key, value in document_index.items(): 
 	#document_list.update({i:key})
@@ -58,11 +58,12 @@ for key, value in document_index.items():
 		writer1.writerow([i, key])
 	i += 1
 	D = []
-	for term, tf in value.items():            
-		if term in total_idf:
-			D.append(tf*total_idf[term])
+	for term in total_idf:
+		if term in value.keys():
+			D.append(value[term]*total_idf[term])
 		else:
 			D.append('0')
+	#print("D: ", D)
 	D_vectors.append(D)
 
 with open(str(o_path)+"/document_vectors.csv",'a',newline='',encoding='utf8') as f_docvec:
@@ -70,8 +71,8 @@ with open(str(o_path)+"/document_vectors.csv",'a',newline='',encoding='utf8') as
 	for pD in D_vectors:
 		writer2.writerow(pD)
 	#pickle.dump(D_vectors,open(str(o_path)+"/document_vectors.pickle",'wb'))
-pp.pprint("D_vectors")
-pp.pprint(D_vectors)
+#pp.pprint("D_vectors")
+#pp.pprint(D_vectors)
 def similarity(D1,D2):
 	v_sum = 0
 	s1_sum = 0
