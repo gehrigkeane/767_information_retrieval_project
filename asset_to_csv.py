@@ -37,6 +37,10 @@ def index_to_csv():
 			except EOFError:
 				break
 
+	ii = list(index.keys())
+	ii = sorted(ii)
+	pp.pprint(ii)
+
 	with open('memory_assets/ii.csv', 'w') as f:  # Just use 'w' mode in 3.x
 		# Header Line
 		# f.write("term,document frequency,term frequency,posting list\n")
@@ -66,7 +70,7 @@ def token_lists_to_csv(filename):
 		#print(content)
 
 		with open('memory_assets/token_strings.csv', 'a') as f:
-			f.write (y + "," + str(content).replace(', ', ':') + "\n")
+			f.write (y + "," + str(content).replace(', ', ':') + ",\n")
 
-
-token_lists_to_csv("newtokenization/")
+index_to_csv()
+#token_lists_to_csv("newtokenization/")

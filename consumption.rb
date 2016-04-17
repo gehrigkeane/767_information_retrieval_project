@@ -19,12 +19,13 @@ module Consumption
 	# 					...
 	# 				}
 	#--------------------------------------------------------------------------------
-	def load_ii
+	def self.load_ii
 		inverted_index = {}
-
+		dict = []
 		CSV.foreach("memory_assets/ii.csv") do |row|
 			term,df,tf,pl = row
 			#next if term != "stag"
+			dict.push(term)
 			inverted_index[term.intern] = [df.to_i, tf.to_i, []]
 			pl.split('`').each do |str|
 				posting = str.split ';'
@@ -41,7 +42,7 @@ module Consumption
 		end
 
 		# Return the inverted index
-		inverted_index
+		return inverted_index,dict
 	end
 
 	#--------------------------------------------------------------------------------
@@ -77,4 +78,19 @@ module Consumption
 			#incomplete logic
 		end
 	end
+end
+
+
+ii,dict = Consumption.load_ii
+
+puts dict.sort
+
+dl = []
+i = 1
+CSV.foreach("memory_assets/token_strings.csv") do |row|
+	next if i > 1
+	name,terms = row
+	#print terms.delete('[\'').split(':').sort
+	
+	i += 1
 end
