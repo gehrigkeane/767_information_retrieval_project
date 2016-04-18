@@ -81,7 +81,7 @@ def print_index(inv_index):
 inv_index, doc_index = create_inverted_index()
 
 
-pickle.dump(inv_index,open('memory_assets/inverted_index.pickle','wb'))
+pickle.dump(inv_index,open('memory_assets/ii.pickle','wb'))
 pickle.dump(doc_index,open('memory_assets/document_index.pickle','wb'))
 
 # with open("memory_assets/inverted_index.pickle",'rb') as f:
@@ -97,6 +97,3 @@ pickle.dump(doc_index,open('memory_assets/document_index.pickle','wb'))
 # 	for i,j in y.items():
 # 		print ( str(i) + ":" + str(j) + ", ", end="")
 # 	print ( " } } " )
-		
-
-
