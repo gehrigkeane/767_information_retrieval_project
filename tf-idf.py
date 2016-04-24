@@ -27,18 +27,20 @@ while True:
 #print("inverted_index: ")
 #print(inverted_index)
 for key, value in inverted_index.items():
-	total_idf.update({key:math.log(N/value[0],10)})
-#print("total_idf: ")
-#print(total_idf)
-
+	if value[0] == N:			
+		continue
+	total_idf.update({key:round(math.log(N/value[0],10),5)})
+total_idf = sorted(total_idf.items(), key=lambda x: x[1])
+#print("total_idf: ", total_idf)
 o_path = "new_processed"
 if not os.path.exists(o_path): 	
 	os.makedirs(o_path) 
 #pickle.dump(total_idf,open(str(o_path)+"/total_idf.pickle",'wb'))
-with open(str(o_path)+"/total_idf.csv", 'a', newline='', encoding='utf8') as f_totalidf:
-	writer = csv.writer(f_totalidf)
-	for key, value in total_idf.items():
-		writer.writerow([key, value])
+with open(str(o_path)+"/total_idf.csv", 'a', newline='') as f_totalidf:
+	writer = csv.writer(f_totalidf, delimiter=',')
+	for i in range(0, len(total_idf)):
+		wstring = total_idf[i][0]+":"+str(total_idf[i][1])
+		writer.writerow([i,wstring])
 
 #--------------read the tf of each document ----------------------#
 path = 'memory_assets/document_index.pickle'
@@ -50,27 +52,38 @@ while True:
 		break
 #print("document_index:")
 #print(document_index)
+
 i = 0
+dlist = []
+exist_terms = [et[0] for et in total_idf]
+print("total_idf: ", total_idf)
+#print("exist_terms:", exist_terms)
 for key, value in document_index.items(): 
-	#document_list.update({i:key})
-	#pickle.dump(document_list,open(str(o_path)+"/document_list.pickle",'wb')) 
-	with open(str(o_path)+"/document_list.csv",'a',newline='',encoding='utf8') as f_docindex:
+	dlist.append([i, key[0:-14]])
+	with open(str(o_path)+"/document_list.csv",'a',newline='') as f_docindex:
 		writer1 = csv.writer(f_docindex)
-		writer1.writerow([i, key])
+		writer1.writerow([i, key[0:-14]])
 	i += 1
 	D = []
-	for term in total_idf:
+	for term in exist_terms:
 		if term in value.keys():
 			D.append(value[term]*total_idf[term])
 		else:
 			D.append('0')
 	#print("D: ", D)
 	D_vectors.append(D)
+pickle.dump(dlist, open(str(o_path)+"/document_list.pickle",'wb'))
 
-with open(str(o_path)+"/document_vectors.csv",'a',newline='',encoding='utf8') as f_docvec:
+doc_count = 0
+with open(str(o_path)+"/document_vectors.csv",'a',newline='') as f_docvec:
 	writer2 = csv.writer(f_docvec)
 	for pD in D_vectors:
-		writer2.writerow(pD)
+		docv = ""
+		for t in range(0, len(pD)-1):
+			docv = docv+str(pD[t])+':'
+		docv = docv+str(pD[-1])
+		writer2.writerow([doc_count, docv])
+		doc_count += 1
 #pickle.dump(D_vectors,open(str(o_path)+"/document_vectors.pickle",'wb'))
 #pp.pprint("D_vectors")
 #pp.pprint(D_vectors)
