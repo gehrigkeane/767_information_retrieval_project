@@ -18,7 +18,7 @@ pp = pprint.PrettyPrinter(indent=4)
 #	Load Inverted Index into memory
 # --------------------------------------------------------------------------------
 def get_index():
-	with open("memory_assets/ii.pickle",'rb') as f:
+	with open("memory_assets/ii_purged.pickle",'rb') as f:
 		while True:
 			try:
 				index = pickle.load(f)
@@ -84,18 +84,20 @@ def get_dv(index, idf, terms, dump):
 		# Iterate through every term in the dictionary
 		# and insert the appropriate weight for each 
 		# indicie of a document vector
-		vec = [0] * len(index)	# init a list of size n , n = total number of terms
+		vec = []#[0] * len(index)	# init a list of size n , n = total number of terms
+		
+		# i = index, j = term
 		for i,j in enumerate(terms):
 			if j in content:	# term j is in document y
 				tf = get_tf(index[j][2].head, y)
 				if tf is not None:		#double check that term frequency returned
-					vec[i] = tf * idf[j]
+					vec.append([tf * idf[j], i]) # Old dv generation: vec[i] = tf * idf[j]
 		dv[y] = vec
-
 		# --------------------------------------------------------------------------------
 		#	Dump document vector in pickle file
 		# --------------------------------------------------------------------------------
 		if dump:
+			y = y.replace('tokens.pickle','vector')
 			pickle.dump(vec,open('memory_assets/vectors/'+y,'wb'))
 	return dv
 
@@ -104,7 +106,7 @@ def get_dv(index, idf, terms, dump):
 # --------------------------------------------------------------------------------
 def dv_to_csv():
 	with open('memory_assets/dv.csv', 'w') as f:
-		vec_files = [file for file in os.listdir("memory_assets/vectors/.") if file.endswith(".pickle")]
+		vec_files = [file for file in os.listdir("memory_assets/vectors/.") if file.endswith("vector")]
 		dv = {}
 
 		# x = index, y = filename
@@ -121,8 +123,14 @@ def dv_to_csv():
 		fnames = list(dv.keys())
 		fnames = sorted(fnames)
 
-		for x in fnames:
-			f.write (x + "," + str(dv[x]).replace(', ', ':') + ",\n")
+		for x,y in enumerate(fnames):
+			print (str(x) + " " + str(y))
+			vec = ""
+			for i in dv[y]:
+				vec += str(i).replace(', ',':').replace('[','').replace(']','') + ";"
+			#print (vec[:-1])
+			#print(y + "," + str(dv[y]).replace(', ', ':') + ",\n")
+			f.write (y + "," + vec[:-1] + ",\n")
 
 # --------------------------------------------------------------------------------
 #	Pick and choose functions

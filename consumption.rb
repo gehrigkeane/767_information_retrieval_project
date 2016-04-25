@@ -22,7 +22,7 @@ module Consumption
 	def self.load_ii(live=false)
 		inverted_index, dict = {}, []
 
-		CSV.foreach("memory_assets/ii.csv") do |row|
+		CSV.foreach("memory_assets/ii_purged.csv") do |row|
 			term,df,tf,pl = row
 
 			# Augment Dictionary
@@ -96,7 +96,7 @@ module Consumption
 	def self.calc_sim(qv, dv)
 		sum, i, size = 0, 0, qv.size
 		while i < size
-			sum += qv[i] * dv[i]
+			sum += qv[i][0] * dv[i][0]
 			i += 1
 		end
 		sum
@@ -130,35 +130,42 @@ module Consumption
 		candidate_docs = []
 		sim = {}
 		q_freq = {}
-		qv = Array.new(dict.length, 0)
+		qv = Array.new
 
 		# Retrieve candidate documents from Inverted index
 		query.each do |term|
 			#puts "#{term}: #{ii[term.intern][2]}" if ii[term.intern]
 			# Build a small query dictionary for weight calculation later
+			next unless dict.include? term 
 			q_freq[term] += 1 if q_freq.key?(term)
 			q_freq[term] = 1 unless q_freq.key?(term)
 
 			# Retrieve all documents that contain a query term
-			next if ii[term.intern][0] == dv.length		#skip if query term not in dictionary
 			#puts "#{term}: #{ii[term.intern][0]}"
 			ii[term.intern][2].each do |posting|
-				candidate_docs |= [posting[0]]
+				candidate_docs |= [posting[0].sub('tokens.pickle','vector')]
 			end
 		end
 		
 		# Create query vector for calculation
 		dict.each_with_index do |term, i|
-			qv[i] = q_freq[term] * idf[term.intern] if query.include?(term)
+			qv.push(Array.new([q_freq[term] * idf[term.intern],i])) if query.include?(term)
 		end
-		
+
+		#pp qv
+		#pp dv[candidate_docs[0].intern]
+
 		# Calculate all necessary similarities
 		candidate_docs.each do |doc|
+		#	pp dv[doc.intern]
+			next unless doc == candidate_docs[0]
 			sim[doc] = calc_sim(qv, dv[doc.intern])
 		end
 
+		pp sim
+
 		# Sort similarities
-		sim = sim.sort_by { |key, value| value }.reverse
+		#sim = sim.sort_by { |key, value| value }.reverse
 
 		return sim[0..10]
 	end
@@ -170,15 +177,17 @@ module Consumption
 		dv = {}
 
 		# Retrieve name,vector pairs from csv
-		CSV.foreach("memory_assets/document_vectors.csv") do |row|
+		CSV.foreach("memory_assets/dv_1.csv") do |row|
 			name, vector = row
-			next unless name == '0'
+			#next unless name == '0007145-vector'
 			vector = vector.split(';').map!{ |x| x.split(':').map(&:to_f) }
-			pp vector
-			#dv[name.intern] = vector
+			vec = {}
+			vector.each { |arr| vec[arr[1].to_i] = arr[0] }
+			#pp vector
+			dv[name] = vec
 		end
 
-		File.open('memory_assets/document_vectors.mar', 'w') {|f| f.write(Marshal.dump(dv)) }
+		File.open('memory_assets/dv.mar', 'w') {|f| f.write(Marshal.dump(dv)) }
 
 		# Return document vector hash
 		return dv if live
@@ -189,12 +198,13 @@ end
 # To build mar files
 #Consumption.load_ii
 #Consumption.load_idf
-#Consumption.load_dv
+#Consumption.load_dv_n
 
 # Query Example - terms pulled from 0097574-tokens.pickle
-#query = ['date','1989','american','journalist','work','french','newspap','write','articl','reaction','peopl','aid','without','know','infect','find','decid','cut','leav','wife','daughter']
+query = ['date','1989','american','journalist','work','french','newspap','write','articl','reaction','peopl','aid','without','know','infect','find','decid','cut','leav','wife','daughter']
 #query = [	'1989','journalist','newspap','articl','reaction','infect' ]
-#pp Consumption.calc_pagerank(query)
-
-Consumption.load_dv_n(true)
+#sim = Consumption.calc_pagerank(query)
+#pp sim
+dv = Consumption.load_dv_n(true)
+puts dv
 #puts vec

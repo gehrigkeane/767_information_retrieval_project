@@ -11,12 +11,12 @@ import csv
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
-def index_to_csv():
+def index_to_csv(filename):
 	tk_files = [file for file in os.listdir(filename+".") if file.endswith(".pickle")]
 
 	total_doc = len(tk_files)
 
-	with open("memory_assets/ii.pickle",'rb') as f:
+	with open("memory_assets/ii_purged.pickle",'rb') as f:
 		while True:
 			try:
 				index = pickle.load(f)
@@ -27,7 +27,7 @@ def index_to_csv():
 	ii = sorted(ii)
 	#pp.pprint(ii)
 
-	with open('memory_assets/ii.csv', 'w') as f:  # Just use 'w' mode in 3.x
+	with open('memory_assets/ii_purged.csv', 'w') as f:  # Just use 'w' mode in 3.x
 		# Header Line
 		# f.write("term,document frequency,term frequency,posting list\n")
 
@@ -61,5 +61,5 @@ def token_lists_to_csv(filename):
 		with open('memory_assets/token_strings.csv', 'a') as f:
 			f.write (y + "," + str(content).replace(', ', ':') + ",\n")
 
-#index_to_csv()
+index_to_csv("newtokenization/")
 #token_lists_to_csv("newtokenization/")

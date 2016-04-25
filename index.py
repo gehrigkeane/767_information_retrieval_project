@@ -25,7 +25,7 @@ def create_inverted_index():
 	# x = file number 0, 1, ..., n
 	# y = file name
 	for x,y in enumerate(tk_files):
-		#print(str(x) + ": Opening: " + str(y))
+		print(str(x) + ": Opening: " + str(y))
 		# Reset line and word counters
 		line_count, word_count = 0, 0
 		# Open file y for writing
@@ -82,25 +82,29 @@ def purge_index():
 
 	tk_files = [file for file in os.listdir(filename+".") if file.endswith(".pickle")]
 	num_docs = len(tk_files)
-	init_size,fin_size = sys.getsizeof(inv_index),0
 	ninty_eight_percent = int(.98 * num_docs)
 
 	terms = list(inv_index.keys())
 	terms = sorted(terms)
 
+	i_len = len(inv_index)
+	i_post = 0
+	for x in inv_index.values():
+		i_post += x[2].length
+
 	for x in terms:
 		if inv_index[x][0] >= ninty_eight_percent:
-			pp.pprint(x + ": " + str( (inv_index.pop(x, None))[0:-1] ))
+			print("Removing: " + x + " - " + str( (inv_index.pop(x, None))[0:-1] ))
+	f_len = len(inv_index)
+	f_post = 0
+	for x in inv_index.values():
+		f_post += x[2].length
+	print("Pre-purge terms:\t" + str(i_len) + "\tPosting length: " + str(i_post))
+	print("Post-purge terms:\t" + str(f_len) + "\tPosting length: " + str(f_post))
 
-	pickle.dump(inv_index,open('memory_assets/ii_new.pickle','wb'))
-	with open("memory_assets/ii_new.pickle",'rb') as f:
-		while True:
-			try:
-				inv_index = pickle.load(f)
-			except EOFError:
-				break
-	fin_size = sys.getsizeof(inv_index)
-	print("Init: " + str(init_size) + "\tFin: " + str(fin_size))
+	pickle.dump(inv_index,open('memory_assets/ii_purged.pickle','wb'))
+
+	return inv_index
 
 def print_index(inv_index):
 	# x = key - the word
@@ -112,12 +116,12 @@ def print_index(inv_index):
 		y[2].print_postings()
 		print ("]")
 
-purge_index()
 #inv_index, doc_index = create_inverted_index()
-
-
 #pickle.dump(inv_index,open('memory_assets/ii.pickle','wb'))
 #pickle.dump(doc_index,open('memory_assets/document_index.pickle','wb'))
+
+purge_index()
+#inv_index = purge_index()
 
 # with open("memory_assets/inverted_index.pickle",'rb') as f:
 # 	while True:
