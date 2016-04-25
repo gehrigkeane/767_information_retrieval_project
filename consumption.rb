@@ -162,6 +162,28 @@ module Consumption
 
 		return sim[0..10]
 	end
+
+	#--------------------------------------------------------------------------------
+	#	 Load the Document Vectors into an array of array's
+	#--------------------------------------------------------------------------------
+	def self.load_dv_n(live=false)
+		dv = {}
+
+		# Retrieve name,vector pairs from csv
+		CSV.foreach("memory_assets/document_vectors.csv") do |row|
+			name, vector = row
+			next unless name == '0'
+			vector = vector.split(';').map!{ |x| x.split(':').map(&:to_f) }
+			pp vector
+			#dv[name.intern] = vector
+		end
+
+		File.open('memory_assets/document_vectors.mar', 'w') {|f| f.write(Marshal.dump(dv)) }
+
+		# Return document vector hash
+		return dv if live
+		return nil unless live
+	end
 end
 
 # To build mar files
@@ -170,6 +192,9 @@ end
 #Consumption.load_dv
 
 # Query Example - terms pulled from 0097574-tokens.pickle
-query = ['date','1989','american','journalist','work','french','newspap','write','articl','reaction','peopl','aid','without','know','infect','find','decid','cut','leav','wife','daughter']
+#query = ['date','1989','american','journalist','work','french','newspap','write','articl','reaction','peopl','aid','without','know','infect','find','decid','cut','leav','wife','daughter']
 #query = [	'1989','journalist','newspap','articl','reaction','infect' ]
-pp Consumption.calc_pagerank(query)
+#pp Consumption.calc_pagerank(query)
+
+Consumption.load_dv_n(true)
+#puts vec

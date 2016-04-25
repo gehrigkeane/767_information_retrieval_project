@@ -12,6 +12,10 @@ import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
 def index_to_csv():
+	tk_files = [file for file in os.listdir(filename+".") if file.endswith(".pickle")]
+
+	total_doc = len(tk_files)
+
 	with open("memory_assets/ii.pickle",'rb') as f:
 		while True:
 			try:
