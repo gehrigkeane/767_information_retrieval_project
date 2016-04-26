@@ -1,6 +1,7 @@
 module Consumption
 	require 'csv'
 	require 'pp'
+	require 'benchmark'
 
 	#--------------------------------------------------------------------------------
 	#	Load the Inverted Index into main memory
@@ -196,19 +197,41 @@ module Consumption
 		# Sort similarities
 		sim = sim.sort_by { |key, value| value }.reverse
 
-		return sim[0..10]
+		return sim[0..10], candidate_docs.length
 	end
 end
 
 #------------------------------------------------------------------------------------------
 #	Construct Marshal files - default is return nil
+#
+#	Total Filesize diff after zero elimination
+# => dict.mar 	(183KB)		(185KB)
+# => dv.mar 	(761KB)		(26,231KB)
+# => idf.mar 	(165KB)		(147KB)
+# => ii.mar 	(3,631KB)	(11,346KB)
+#
 #------------------------------------------------------------------------------------------
 # Consumption.load_ii
 # Consumption.load_idf
 # Consumption.load_dv_n
 
-# Query Example - terms pulled from 0097574-tokens.pickle
+#------------------------------------------------------------------------------------------
+#	Query Example - terms pulled from 0097574-tokens.pickle
+#------------------------------------------------------------------------------------------
 query = ['date','1989','american','journalist','work','french','newspap','write','articl','reaction','peopl','aid','without','know','infect','find','decid','cut','leav','wife','daughter']
-#query = [	'1989','journalist','newspap','articl','reaction','infect' ]
-sim = Consumption.calc_pagerank(query)
-pp sim
+query1 = [	'1989','journalist','newspap','articl','reaction','infect' ]
+#pp Consumption.calc_pagerank(query) 
+s,l = 0,0
+Benchmark.bm(7) do |x|
+	x.report("1:")	{ Consumption.calc_pagerank(query) }
+	x.report("2:")	{ Consumption.calc_pagerank(query) }
+	x.report("3:")	{ s,l = Consumption.calc_pagerank(query) }
+end
+pp "Query candidate_docs: #{l}"
+
+Benchmark.bm(7) do |x|
+	x.report("1:")	{ Consumption.calc_pagerank(query1) }
+	x.report("2:")	{ Consumption.calc_pagerank(query1) }
+	x.report("3:")	{ s,l = Consumption.calc_pagerank(query1) }
+end
+pp "Query1 candidate_docs: #{l}"
