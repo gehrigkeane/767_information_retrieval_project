@@ -70,6 +70,48 @@ module Consumption
 	end
 
 	#--------------------------------------------------------------------------------
+	#	 Load the Term IDF's into a hash
+	#--------------------------------------------------------------------------------
+	def self.load_snap(live=false)
+		snap = {}
+
+		# Simple retrieval of key,value pairs from csv file
+		CSV.foreach("3.ASSETS/snap.csv") do |row|
+			key,string = row
+			snap[key.intern] = string if string
+			snap[key.intern] = "No plot summary available..." unless string
+		end
+
+		File.open('3.ASSETS/snap.mar', 'w') {|f| f.write(Marshal.dump(snap)) }
+
+		# Return the snap hash
+		return snap if live
+		return nil unless live
+	end
+
+	#--------------------------------------------------------------------------------
+	#	 Load the Term snapshot's into a hash
+	#--------------------------------------------------------------------------------
+	def self.load_title(live=false)
+		title = {}
+
+		# Simple retrieval of key,value pairs from csv file
+		CSV.foreach("3.ASSETS/title.csv") do |row|
+			key,string = row
+			title[key.intern] = string if string
+			title[key.intern] = "broken title..." unless string
+		end
+
+		pp title
+
+		File.open('3.ASSETS/title.mar', 'w') {|f| f.write(Marshal.dump(title)) }
+
+		# Return the title hash
+		return title if live
+		return nil unless live
+	end
+
+	#--------------------------------------------------------------------------------
 	#	 Load the Document Vectors into an array of array's
 	#--------------------------------------------------------------------------------
 	def self.load_dv(live=false)
