@@ -1,5 +1,7 @@
 load 'userQueryParser.rb'
 
+#puts all my work together for the query vector
+
 #made a few assumptions
 #we know about TF-IDF
 
@@ -7,7 +9,9 @@ load 'userQueryParser.rb'
 #key is the term, value is the list of 3 values,
 #in addition to a posting list
 
-
+#takes a string and makes it into a hashtable
+#so like if query is "I am bad at examples examples"
+#it would be userHash["bad"]=1 userHash["example"]=2
 def queryHasher(userQuery)
   userHash = {}
   userQuery.gsub(/\s+/m, ' ').strip.split(" ").each do |word|
@@ -21,7 +25,8 @@ def queryHasher(userQuery)
   return userHash
 end
 
-
+#takes 2 hashtables and produces
+#the idf of each vector in the doc if we had one
 def produceVector(webHash, userHash)
   newArray = []
   webHash.each do |key, array|
@@ -33,10 +38,7 @@ def produceVector(webHash, userHash)
     end
   end
 
-  #use it and pass it
-  for i in 0 ... newArray.size
-    puts newArray[i]
-  end
+  puts newArray
 end
 
 simpleHash = {}
@@ -53,7 +55,7 @@ userHash["basketball"] = 1.0
 userHash["university"] = 0.0
 
 #produceVector(simpleHash, userHash)
-userQuery = "hello college jayhawk college stupid rational stuff"
+userQuery = "hello college jayhawk jayhawk college stupid rational stuff"
 #userHash2 = queryHasher(userQuery)
 
 produceVector(simpleHash, queryHasher(Stemmer(removeStopWords(userQuery))))

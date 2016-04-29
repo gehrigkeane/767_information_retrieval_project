@@ -13,6 +13,7 @@ def Stemmer(a)
   return returnStr
 end
 
+#guess we don't really need this?
 def removeStopWords(a)
   stopWords  = ["","a","ago","also","am","an","and","ani","ar","aren't","arent",
             "as","ask","at","did","didn't","didnt","do","doe","would",
