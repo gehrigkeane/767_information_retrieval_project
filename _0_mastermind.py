@@ -21,11 +21,14 @@ TEST = False
 #ntlk for python 3
 #	sudo apt-get install python3-setuptools
 #	sudo pip3 install nltk
+#Beautiful soup for python 3
+#	sudo apt-get install python3-bs4
 
 # Populates '1.TXT/' directory with text files
 #	Future Dependencies
 #		- Required for Tokenization
 _1_parser.parse_html("0.HTML/", TEST)
+_1_parser.createTitleAndSnaps("0.HTML/", TEST, 'title.csv', 'snap.csv')
 
 # Populates '2.TOKEN/' directory with pickle files
 # 	Future Dependencies
