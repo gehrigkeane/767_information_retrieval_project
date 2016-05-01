@@ -111,8 +111,9 @@ module Consumption
 		return nil unless live
 	end
 
+
 	#--------------------------------------------------------------------------------
-	#	 Load the Document Vectors into an array of array's
+	#	 Load the Document Vectors into an hash w/ k=term#, v=w_t,d
 	#--------------------------------------------------------------------------------
 	def self.load_dv(live=false)
 		dv = {}
@@ -120,41 +121,56 @@ module Consumption
 		# Retrieve name,vector pairs from csv
 		CSV.foreach("3.ASSETS/dv.csv") do |row|
 			name, vector = row
-			vector = vector.delete('[]').split(':').map(&:to_f)
-			dv[name.intern] = vector
-		end
-
-		File.open('3.ASSETS/dv.mar', 'w') {|f| f.write(Marshal.dump(dv)) }
-
-		# Return document vector hash
-		return dv if live
-		return nil unless live
-	end
-
-	#--------------------------------------------------------------------------------
-	#	 Load the Document Vectors into an hash w/ k=term#, v=w_t,d
-	#--------------------------------------------------------------------------------
-	def self.load_dv_n(live=false)
-		dv = {}
-
-		# Retrieve name,vector pairs from csv
-		CSV.foreach("3.ASSETS/dv.csv") do |row|
-			name, vector = row
-			#next unless name == '0007145-vector'
+			#next unless name == '0007145.vector'
 			vector = vector.split(';').map!{ |x| x.split(':').map(&:to_f) }
 			vec = {}
 			vector.each { |arr| vec[arr[1].to_i] = arr[0] }
-			#pp vector
 			dv[name.intern] = vec
 		end
 
+		d_mag = {}
+		dv.each do |key,value|
+			key = key[0...7].intern
+			value.each do |k,w|
+				d_mag[key] = w ** 2 unless d_mag.key? key
+				d_mag[key] += w ** 2 if d_mag.key? key
+			end
+			d_mag[key] = Math.sqrt(d_mag[key])
+		end
+
+		File.open('3.ASSETS/dmag.mar', 'w') {|f| f.write(Marshal.dump(d_mag)) }
 		File.open('3.ASSETS/dv.mar', 'w') {|f| f.write(Marshal.dump(dv)) }
 
 		# Return document vector hash
 		return dv if live
 		return nil unless live
 	end
-	
+
+	#--------------------------------------------------------------------------------
+	#	 Retrieve document snapshots with appropriate words highlighted
+	#--------------------------------------------------------------------------------
+	def self.get_snap(id, query)
+		snaps = Marshal.load(File.read('3.ASSETS/snap.mar'))
+		query = query.downcase.split
+		snap = snaps[id.intern].split
+		
+		snap.each_with_index do | term,i |
+			if query.include? term.downcase
+				snap[i] = "<b>" + term + "</b>"	
+			end
+		end
+		
+		snap.join(" ")
+	end
+
+	#--------------------------------------------------------------------------------
+	#	 Retrieve document snapshots with appropriate words highlighted
+	#--------------------------------------------------------------------------------
+	def self.get_title(id)
+		title = Marshal.load(File.read('3.ASSETS/title.mar'))
+		title[id.intern]
+	end
+
 	#--------------------------------------------------------------------------------
 	#	 Simply calculate dot product of two vectors
 	# => see the following for benchmarks
@@ -173,7 +189,7 @@ module Consumption
 	end
 	
 	#--------------------------------------------------------------------------------
-	#	 Calculate Pagerank
+	#	 Calculate Pagerank - query must be a frequency hash
 	#--------------------------------------------------------------------------------
 	def self.calc_pagerank(query)
 		if File.file?('3.ASSETS/ii.mar') and File.file?('3.ASSETS/dict.mar')
@@ -189,57 +205,44 @@ module Consumption
 			idf = load_idf(true)
 		end
 		
-		if File.file?('3.ASSETS/dv.mar')
-			dv = Marshal.load(File.read('3.ASSETS/dv.mar'))
+		if File.file?('3.ASSETS/dmag.mar')
+			d_mag = Marshal.load(File.read('3.ASSETS/dmag.mar'))
 		else
-			dv = load_dv_n(true)
+			d_mag = load_dv_n(true)
 		end
 
-		# Gather candidate vectors
-		# calculate similarity based off candidates - of course
-		candidate_docs = []
 		sim = {}
-		q_freq = {}
-		qv = {}
+		q_mag = 0
 
-		# Retrieve candidate documents from Inverted index
-		query.each do |term|
-			#puts "#{term}: #{ii[term.intern][2]}" if ii[term.intern]
-			# Build a small query dictionary for weight calculation later
-			next unless dict.include? term 
-			q_freq[term] += 1 if q_freq.key?(term)
-			q_freq[term] = 1 unless q_freq.key?(term)
+		# Calculate Query vector magnitude - exclude words not in dictionary
+		query.each do |term, tf_t|
+			next unless dict.include? term
+			q_mag += ( (tf_t * idf[term.intern]) ** 2 )
+		end
+		q_mag = Math.sqrt(q_mag)
 
-			# Retrieve all documents that contain a query term
-			#puts "#{term}: #{ii[term.intern][0]}"
+		# Calculate Cosine Similarity
+		query.each do |term, tf_t|
+			next unless dict.include? term
+
+			# 	Iterate through each relevant posting list and augment Cosine similarity figure
+			# 	Note: the vecotr space is never actually constructed, it's generated dynamically
+			# 	Vector norm's are precalculated for both the query and documents
 			ii[term.intern][2].each do |posting|
-				#puts posting
-				candidate_docs |= [posting[0].sub('token','vector')]
+				d_w = (posting[2] * idf[term.intern]) / d_mag[posting[0][0...7].intern]
+				q_w = (tf_t * idf[term.intern]) / q_mag
+
+				if sim.key? posting[0][0...7]
+					sim[posting[0][0...7]] += q_w * d_w
+				else
+					sim[posting[0][0...7]] = q_w * d_w
+				end
 			end
 		end
-		
-		#puts q_freq
-		# Create query vector for calculation
-		dict.each_with_index do |term, i|
-			qv[i] = q_freq[term] * idf[term.intern]	if query.include?(term)#qv.push(Array.new([q_freq[term] * idf[term.intern],i])) if query.include?(term)
-		end
 
-		#pp candidate_docs
-		#pp dv[candidate_docs[0].intern]
-
-		# Calculate all necessary similarities
-		candidate_docs.each do |doc|
-		#	pp dv[doc.intern]
-		#	next unless doc == candidate_docs[0]
-			sim[doc] = calc_sim(qv, dv[doc.intern])
-		end
-
-		#pp sim
-
-		# Sort similarities
+		# Sort similarities return top ten
 		sim = sim.sort_by { |key, value| value }.reverse
-
-		return sim[0..10], candidate_docs.length
+		sim[0..10]
 	end
 end
 
@@ -256,24 +259,3 @@ end
 # Consumption.load_ii
 # Consumption.load_idf
 # Consumption.load_dv_n
-
-#------------------------------------------------------------------------------------------
-#	Query Example - terms pulled from 0097574-tokens.pickle
-#------------------------------------------------------------------------------------------
-query = ['date','1989','american','journalist','work','french','newspap','write','articl','reaction','peopl','aid','without','know','infect','find','decid','cut','leav','wife','daughter']
-query1 = [	'1989','journalist','newspap','articl','reaction','infect' ]
-#pp Consumption.calc_pagerank(query) 
-s,l = 0,0
-Benchmark.bm(7) do |x|
-	x.report("1:")	{ Consumption.calc_pagerank(query) }
-	x.report("2:")	{ Consumption.calc_pagerank(query) }
-	x.report("3:")	{ s,l = Consumption.calc_pagerank(query) }
-end
-pp "Query candidate_docs: #{l}"
-
-Benchmark.bm(7) do |x|
-	x.report("1:")	{ Consumption.calc_pagerank(query1) }
-	x.report("2:")	{ Consumption.calc_pagerank(query1) }
-	x.report("3:")	{ s,l = Consumption.calc_pagerank(query1) }
-end
-pp "Query1 candidate_docs: #{l}"

@@ -78,7 +78,7 @@ def get_dv(index, idf, terms, dump, test):
 		for i,j in enumerate(terms):				# i = index, j = term
 			if j in content:						# term j is in document y
 				tf = get_tf(index[j][2].head, y)
-				if tf is not None:					#double check that term frequency returned
+				if tf is not None:					# double check that term frequency returned
 					vec.append([tf * idf[j], i]) 	# Old dv generation: vec[i] = tf * idf[j]
 		dv[y] = vec
 		#----------------------------------------------------------------------------------
