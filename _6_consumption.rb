@@ -102,8 +102,6 @@ module Consumption
 			title[key.intern] = "broken title..." unless string
 		end
 
-		pp title
-
 		File.open('3.ASSETS/title.mar', 'w') {|f| f.write(Marshal.dump(title)) }
 
 		# Return the title hash
@@ -256,6 +254,8 @@ end
 # => ii.mar 	(3,631KB)	(11,346KB)
 #
 #------------------------------------------------------------------------------------------
-# Consumption.load_ii
-# Consumption.load_idf
-# Consumption.load_dv_n
+Consumption.load_ii
+Consumption.load_idf
+Consumption.load_snap
+Consumption.load_title
+Consumption.load_dv

@@ -58,3 +58,5 @@ _5_converter.idf_to_csv(idf, terms)			# requires idf data structure
 _5_converter.index_to_csv("2.TOKEN/")		# opens purged ii pickle file
 _5_converter.token_lists_to_csv("2.TOKEN/")	# operates on straight token files
 _5_converter.dv_to_csv()					# requires get_dv w/ dump=True ergo: get_dv(ii, idf, t, True, False)
+
+os.system("ruby _6_consumption.rb")
