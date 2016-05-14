@@ -1,7 +1,7 @@
 class posting:
 	def __init__(self):
 		self.file_name = None # String value
-		self.word_num = None # Int value
+		self.word_num = None # List of ints
 		self.term_f = None # Int value
 		self.next = None # contains the reference to the next posting
 

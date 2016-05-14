@@ -8,7 +8,7 @@ import pickle
 import sys
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
-sys.setrecursionlimit(5000)		#Allows pickling of really large files
+sys.setrecursionlimit(10000)		#Allows pickling of really large files
 
 def create_inverted_index(pathname, test):
 	# List and open every file in current dir
@@ -29,14 +29,14 @@ def create_inverted_index(pathname, test):
 				except EOFError:
 					break
 			
-			doc_index[y] = {}
-			current_term_dict = doc_index[y]
+			#doc_index[y] = {}
+			#current_term_dict = doc_index[y]
 
 			for word in content:					# For each word in the list of tokens
-				if word in current_term_dict.keys():
-					current_term_dict[word] += 1
-				else:
-					current_term_dict[word] = 1
+				#if word in current_term_dict.keys():
+				#	current_term_dict[word] += 1
+				#else:
+				#	current_term_dict[word] = 1
 
 				# We are now parsing word by word
 				# y = pathname
@@ -47,15 +47,43 @@ def create_inverted_index(pathname, test):
 				if word in inv_index.keys():
 					w = inv_index[word]				# Capture ii entry for existing word
 					w[1] += 1						# increment total frequency
-					ll = w[2]						# Check Augments/Modifies the LL appropriately
-					ll.check(y, word_count)
-					w[0] = ll.length
+					if y in w[2].keys():				# File is in word's posting list
+						ld = w[2][y]
+						ld[0].append(word_count)
+						ld[1] += 1
+					else:							# Word is in II, but not posting for y
+						w[2][y] = [[word_count],1]
+					w[0] = len(w[2])				# Check Augments/Modifies the LL appropriately
 				else:								# Create inverted index entry for new word
-					ll = llist.posting_list()
-					ll.add(y, word_count)
-					inv_index[word] = [1,1,ll]
+					ld = {y:[[word_count],1]}
+					inv_index[word] = [1,1,ld]
 				word_count += 1
-	return inv_index, doc_index
+
+	num_docs = len(tk_files)
+	ninty_eight_percent = int(.98 * num_docs)
+
+	# Extracts and sorts all of the terms from the Inverted Index
+	terms = list(inv_index.keys())
+	terms = sorted(terms)
+
+	i_len = len(inv_index)						# i_len = Index Length - purely for benchmarking output
+	i_post = 0									# i_post = Posting count - again for benchmarking
+	for x in inv_index.values():
+		i_post += len(x[2])
+
+	for x in terms:								# Remove terms in the 98th percentile
+		if inv_index[x][0] >= ninty_eight_percent:
+			print("Removing: " + x + " - " + str( (inv_index.pop(x, None))[0:-1] ))
+
+	f_len = len(inv_index)						# f_len = Index Length - purely for benchmarking output
+	f_post = 0									# f_post = Posting count - again for benchmarking
+	for x in inv_index.values():
+		f_post += len(x[2])
+	print("Pre-purge terms:\t" + str(i_len) + "\tPosting length: " + str(i_post))
+	print("Post-purge terms:\t" + str(f_len) + "\tPosting length: " + str(f_post))
+
+	pickle.dump(inv_index,open('3.ASSETS/ii_purged','wb'))
+	return inv_index
 
 def purge_index(pathname):
 	with open("3.ASSETS/ii",'rb') as f:

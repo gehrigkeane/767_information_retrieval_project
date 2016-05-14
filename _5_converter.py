@@ -7,6 +7,7 @@ import pickle
 import sys
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
+sys.setrecursionlimit(10000)
 
 #------------------------------------------------------------------------------------------
 #	Create idf csv file
@@ -15,7 +16,7 @@ def idf_to_csv(idf, terms):
 	print("CSV: IDF")
 	with open('3.ASSETS/idf.csv', 'w') as f:
 		for x in terms:
-			f.write (x + "," + str(idf[x]) + ",\n")
+			f.write (x + "," + str(round(idf[x],8)) + ",\n")
 
 #------------------------------------------------------------------------------------------
 #	Create inverted index csv file
@@ -43,15 +44,11 @@ def index_to_csv(pathname):
 
 		# x = term, y = value
 		for x in ii:
-			if index[x][0] >= 934:
+			if index[x][0] >= total_doc:
 				pp.pprint(str(x) + "," + str(index[x][0]) + "," + str(index[x][1]))
 			f.write (str(x) + "," + str(index[x][0]) + "," + str(index[x][1]) + ",")
-			n = index[x][2].head
-			while n:
-				temp = str(n.word_num)
-				temp = temp.replace(', ', ':')
-				f.write (str(n.file_name) + ";" + temp + ";" + str(n.term_f) + "`")
-				n = n.next
+			for k,v in index[x][2].items():
+				f.write (str(k[0:7]) + ";" + str(v[0]).replace(', ', ':') + ";" + str(v[1]) + "`")
 			f.write ("\n")
 			#y[2].print_postings()
 
@@ -82,10 +79,11 @@ def dv_to_csv():
 			print (str(x) + " " + str(y))
 			vec = ""
 			for i in dv[y]:
+				i[0] = round(i[0],8)
 				vec += str(i).replace(', ',':').replace('[','').replace(']','') + ";"
 			#print (vec[:-1])
 			#print(y + "," + str(dv[y]).replace(', ', ':') + ",\n")
-			f.write (y + "," + vec[:-1] + ",\n")
+			f.write (y[0:7] + "," + vec[:-1] + ",\n")
 
 #------------------------------------------------------------------------------------------
 #	Create token list csv file

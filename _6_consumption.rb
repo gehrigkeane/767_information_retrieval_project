@@ -41,9 +41,32 @@ module Consumption
 			end
 		end
 
+		i = 0
+		dict_hash = {}
+		dict.each do |term|
+			dict_hash[i] = term
+			i += 1
+		end
+
+		idf = {}
+
+		# Simple retrieval of key,value pairs from csv file
+		CSV.foreach("3.ASSETS/idf.csv") do |row|
+			term,value = row
+			idf[term.intern] = value.to_f.round(4)
+		end
+
+		# Index Fragmentation
+		inverted_index.each do |term, list|
+			temp = {}
+			temp[term] = list
+			File.open("3.ASSETS/ii/#{term}", 'w') {|f| f.write(Marshal.dump([temp,idf[term]])) }
+		end
+
 		# Dump inverted index and dictionary (much like python's pickle)
-		File.open('3.ASSETS/ii.mar', 'w') {|f| f.write(Marshal.dump(inverted_index)) }
-		File.open('3.ASSETS/dict.mar', 'w') {|f| f.write(Marshal.dump(dict)) }
+		#File.open('3.ASSETS/ii.mar', 'w') {|f| f.write(Marshal.dump(inverted_index)) }
+		#File.open('3.ASSETS/dict.mar', 'w') {|f| f.write(Marshal.dump(dict)) }
+		#File.open('3.ASSETS/dict_hash.mar', 'w') {|f| f.write(Marshal.dump(dict_hash)) }
 
 		# Return the inverted index
 		return inverted_index,dict if live
@@ -59,7 +82,7 @@ module Consumption
 		# Simple retrieval of key,value pairs from csv file
 		CSV.foreach("3.ASSETS/idf.csv") do |row|
 			term,value = row
-			idf[term.intern] = value.to_f
+			idf[term.intern] = value.to_f.round(4)
 		end
 
 		File.open('3.ASSETS/idf.mar', 'w') {|f| f.write(Marshal.dump(idf)) }
@@ -80,6 +103,12 @@ module Consumption
 			key,string = row
 			snap[key.intern] = string if string
 			snap[key.intern] = "No plot summary available..." unless string
+		end
+
+		# Index Fragmentation
+		snap.each do |doc, string|
+			temp = string.split
+			File.open("3.ASSETS/snaps/#{doc}", 'w') {|f| f.write(Marshal.dump(temp)) }
 		end
 
 		File.open('3.ASSETS/snap.mar', 'w') {|f| f.write(Marshal.dump(snap)) }
@@ -128,7 +157,7 @@ module Consumption
 
 		d_mag = {}
 		dv.each do |key,value|
-			key = key[0...7].intern
+			key = key.intern
 			value.each do |k,w|
 				d_mag[key] = w ** 2 unless d_mag.key? key
 				d_mag[key] += w ** 2 if d_mag.key? key
@@ -136,9 +165,17 @@ module Consumption
 			d_mag[key] = Math.sqrt(d_mag[key])
 		end
 
+		# Index Fragmentation
+		dv.each do |doc, vector|
+			temp = {}
+			temp[doc] = vector
+			File.open("3.ASSETS/dv/#{doc}", 'w') {|f| f.write(Marshal.dump([temp,d_mag[doc]])) }
+		end		
+
 		File.open('3.ASSETS/dmag.mar', 'w') {|f| f.write(Marshal.dump(d_mag)) }
 		File.open('3.ASSETS/dv.mar', 'w') {|f| f.write(Marshal.dump(dv)) }
 
+		#pp dv
 		# Return document vector hash
 		return dv if live
 		return nil unless live
@@ -168,23 +205,6 @@ module Consumption
 		title = Marshal.load(File.read('3.ASSETS/title.mar'))
 		title[id.intern]
 	end
-
-	#--------------------------------------------------------------------------------
-	#	 Simply calculate dot product of two vectors
-	# => see the following for benchmarks
-	# => http://stackoverflow.com/questions/7372489/whats-the-efficient-way-to-multiply-two-arrays-and-get-sum-of-multiplied-values/7373434#7373434
-	#
-	# => hash resources: http://stackoverflow.com/questions/8407756/ruby-for-each-key-value-pair-in-a-hash
-	#--------------------------------------------------------------------------------
-	def self.calc_sim(qv, dv)
-		#while i < size
-		#	sum += qv[i][0] * dv[i][0]
-		#	i += 1
-		#end
-		sum, i, size = 0, 0, qv.size
-		qv.each { |key,value| sum += value * dv[key] if dv.key? key }
-		sum
-	end
 	
 	#--------------------------------------------------------------------------------
 	#	 Calculate Pagerank - query must be a frequency hash
@@ -210,6 +230,7 @@ module Consumption
 		end
 
 		sim = {}
+		q_vector = {}
 		q_mag = 0
 
 		# Calculate Query vector magnitude - exclude words not in dictionary
@@ -229,6 +250,7 @@ module Consumption
 			ii[term.intern][2].each do |posting|
 				d_w = (posting[2] * idf[term.intern]) / d_mag[posting[0][0...7].intern]
 				q_w = (tf_t * idf[term.intern]) / q_mag
+				q_vector[term] = q_w
 
 				if sim.key? posting[0][0...7]
 					sim[posting[0][0...7]] += q_w * d_w
@@ -242,6 +264,58 @@ module Consumption
 		sim = sim.sort_by { |key, value| value }.reverse
 		sim[0..10]
 	end
+
+	def self.calc_relevance(query, docs)
+
+		l_start = Time.now
+		ii		= Marshal.load(File.read('3.ASSETS/ii.mar'))
+		idf		= Marshal.load(File.read('3.ASSETS/idf.mar'))
+		dv		= Marshal.load(File.read('3.ASSETS/dv.mar'))
+		dict_hash 	= Marshal.load(File.read('3.ASSETS/dict_hash.mar'))
+		l_fin = Time.now
+		pp "Load Time: #{l_fin - l_start}"
+		a = 1
+		b = 0.8
+
+		q_doc = {}
+
+		# Get all of the terms from all relevant documents
+		# => sum all relevant docs together
+		t_start = Time.now()
+		docs.each do |doc|
+			next unless doc
+			doc = doc+".vector"
+			dv[doc.intern].each do |t_num,w_t|
+				if q_doc.include? t_num
+					q_doc[t_num] += w_t
+				else
+					q_doc[t_num] = w_t
+				end
+			end
+		end
+
+		# Multiply Sum-D_r by coefficient
+		# => multiply by B/|D_r|
+		c = b/(docs.length)
+		q_doc.each do |t_num, w_t|
+			term = dict_hash[t_num]
+			query[term] = a * query[term] + c * w_t
+		end
+
+		#q_doc.sort_by { |key, value| key }.reverse
+
+		# Perform Addition between a*q_0 and new vector (apply alpha to q_0)
+		
+		t_fin = Time.now
+
+		pp q_doc
+		pp t_fin - t_start
+		pp q_doc.length
+
+
+
+		# Send new query vector to ranking function
+	end
 end
 
 #------------------------------------------------------------------------------------------
@@ -253,9 +327,28 @@ end
 # => idf.mar 	(165KB)		(147KB)
 # => ii.mar 	(3,631KB)	(11,346KB)
 #
+#	Filesizes Pre-5000 v. Post-5000
+# => dict.mar	183			408
+# => dmag.mar	26			149
+# => dv.mar		761			3799
+# => idf.mar	146			331
+# => ii.mar		3631		16371
+# => snap.mar	484			2537
+# => title.mar	40			175
+#
+#	Filesizes post name truncation and rounding
+# => dict.mar	408			408
+# => dmag.mar	149			149
+# => dv.mar		3799		3733
+# => idf.mar	331			328		(round 4) 326
+# => ii.mar		16371		13286
+# => snap.mar	2537		
+# => title.mar	175			
 #------------------------------------------------------------------------------------------
-Consumption.load_ii
-Consumption.load_idf
+#Consumption.load_ii
+#Consumption.load_idf
 Consumption.load_snap
-Consumption.load_title
-Consumption.load_dv
+#Consumption.load_title
+#Consumption.load_dv
+
+#Consumption.calc_relevance(['0013140','1520211','3220042','1201607','0241527'])

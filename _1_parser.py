@@ -64,7 +64,7 @@ def createTitleAndSnaps(pathname, test, titlecsv, snapcsv):
 		#finds the film TITLE and write them to a csv file
 		#-------------------------------------------------#
 		b = soup.find(itemprop="name").find('a', href=True)
-		title = '\'' + b.get_text() + '\''
+		title = '"' + b.get_text().replace('"',"'") + '"'
 		filename = y[:-5]+","
 		with open("3.ASSETS/"+titlecsv, "a") as myfile:
 			myfile.write(filename)
@@ -79,12 +79,12 @@ def createTitleAndSnaps(pathname, test, titlecsv, snapcsv):
 		with open("3.ASSETS/"+snapcsv, "a") as myfile:
 			myfile.write(filename)
 		if desc != None:
-			snap = '\'' + desc.get_text().replace('\n','') + '\''
+			snap = '"' + desc.get_text().replace('\n','').replace('"',"'") + '"'
 			with open("3.ASSETS/"+snapcsv, "a") as myfile:
 				myfile.write(snap+',\n')
 		else:
 			with open("3.ASSETS/"+snapcsv, "a") as myfile:
-				myfile.write('\'\','+'\n')
+				myfile.write('"",'+'\n')
 
 #------------------------------------------------------------------------------------------
 #	Correct invokation of parse_html

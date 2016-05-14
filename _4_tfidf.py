@@ -8,6 +8,7 @@ import pickle
 import sys
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
+sys.setrecursionlimit(10000)
 
 #------------------------------------------------------------------------------------------
 #	Load Inverted Index into memory
@@ -77,7 +78,7 @@ def get_dv(index, idf, terms, dump, test):
 		vec = []									# vec will grow on non-zero terms
 		for i,j in enumerate(terms):				# i = index, j = term
 			if j in content:						# term j is in document y
-				tf = get_tf(index[j][2].head, y)
+				tf = index[j][2][y][1]
 				if tf is not None:					# double check that term frequency returned
 					vec.append([tf * idf[j], i]) 	# Old dv generation: vec[i] = tf * idf[j]
 		dv[y] = vec
